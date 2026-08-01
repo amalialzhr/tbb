@@ -1,0 +1,508 @@
+/* 
+  TBB — Jasa Temani Bandung Landing Page
+  Custom Stylesheet (styles.css)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Color Variables */
+:root {
+  --color-mulberry: #6B3654;
+  --color-mauve: #A85D82;
+  --color-blush: #D9A0BE;
+  --color-cream: #FBF5F3;
+  --color-ink: #2A1620;
+  --color-sage: #7C9885;
+
+  /* Theme Backgrounds */
+  --bg-primary: var(--color-cream);
+  --text-primary: var(--color-ink);
+  --card-border: rgba(107, 54, 84, 0.15);
+  --card-bg: #FFFFFF;
+}
+
+/* Dark Mode Variables Override */
+.dark {
+  --color-mulberry: #F0C9DD;
+  --color-mauve: #E29BC0;
+  --color-blush: #B97A9C;
+  --bg-primary: #1F1119;
+  --text-primary: #F5E9EF;
+  --color-ink: #F5E9EF;
+  --card-border: rgba(226, 155, 192, 0.2);
+  --card-bg: #2B1A25;
+}
+
+/* Lenis Smooth Scroll Resets */
+html.lenis, html.lenis body {
+  height: auto !important;
+}
+
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Base Configurations */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Glassmorphism styling */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass-panel {
+  background: rgba(43, 26, 37, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 155, 192, 0.1);
+}
+
+
+
+/* Smooth custom transitions */
+.transition-theme {
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Horizontal line custom connector in How to Book */
+.book-connector {
+  position: absolute;
+  top: 32px;
+  left: 16.6%;
+  width: 66.7%;
+  height: 2px;
+  background: repeating-linear-gradient(to right, transparent, transparent 4px, var(--color-blush) 4px, var(--color-blush) 8px);
+  z-index: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-blush);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-mauve);
+}
+
+/* Services active tabs indicator styling */
+.tab-active {
+  background-color: var(--color-mauve);
+  color: #FFFFFF !important;
+}
+
+.dark .tab-active {
+  background-color: var(--color-mulberry);
+  color: #FFFFFF !important;
+}
+
+/* Premium Navbar Scroll Blending */
+.navbar-scrolled {
+  background-color: rgba(251, 245, 243, 0.85); /* Cream bg */
+  border-bottom: 1px solid rgba(107, 54, 84, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(107, 54, 84, 0.04);
+}
+
+.dark .navbar-scrolled {
+  background-color: rgba(31, 17, 25, 0.85); /* Bgdark bg */
+  border-bottom: 1px solid rgba(226, 155, 192, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 30px rgba(107, 54, 84, 0.04);
+}
+
+.dark .shadow-soft {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* 3D Card Hover Tilt Effects & Spotlight Sibling Fade */
+.service-card-item,
+.companion-card,
+.testimonial-card,
+.tilt-card {
+  transition: transform 0.18s ease-out, opacity 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  box-shadow: 0 10px 30px rgba(107, 54, 84, 0.04);
+}
+
+.dark .service-card-item,
+.dark .companion-card,
+.dark .testimonial-card,
+.dark .tilt-card {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+/* Sibling card fading in the same container */
+.spotlight-group-active .service-card-item:not(.spotlight-active),
+.spotlight-group-active .companion-card:not(.spotlight-active),
+.spotlight-group-active .testimonial-card:not(.spotlight-active),
+.spotlight-group-active .tilt-card:not(.spotlight-active) {
+  opacity: 0.7;
+}
+
+/* Stable Hover Bolding without letter width shifting */
+.service-card-item:hover h4,
+.companion-card:hover h3,
+.testimonial-card:hover h4,
+.tilt-card:hover h3,
+.tilt-card:hover h4,
+.tilt-card:hover .bold-on-hover {
+  text-shadow: 0.5px 0 0 currentColor;
+}
+
+/* Hero Polaroid Stack */
+.polaroid-stack {
+  position: relative;
+  width: 280px;
+  height: 360px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .polaroid-stack {
+    width: 320px;
+    height: 400px;
+  }
+}
+
+.polaroid-card {
+  position: absolute;
+  width: 240px;
+  height: 310px;
+  background: #FFFFFF;
+  border: 1px solid rgba(107, 54, 84, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  padding-bottom: 24px;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), z-index 0.3s, box-shadow 0.3s;
+  border-radius: 8px;
+}
+
+@media (min-width: 640px) {
+  .polaroid-card {
+    width: 270px;
+    height: 340px;
+  }
+}
+
+.dark .polaroid-card {
+  background: #2B1A25;
+  border-color: rgba(226, 155, 192, 0.1);
+}
+
+.polaroid-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@media (min-width: 640px) {
+  .polaroid-card img {
+    height: 220px;
+  }
+}
+
+.polaroid-label {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 12px;
+  color: var(--color-mulberry);
+  font-size: 0.95rem;
+}
+
+.dark .polaroid-label {
+  color: #F0C9DD;
+}
+
+/* Initial rotations and stacking */
+.polaroid-1 {
+  transform: rotate(-10deg) translate(-20px, 15px);
+  z-index: 10;
+}
+.polaroid-2 {
+  transform: rotate(6deg) translate(25px, 0px);
+  z-index: 20;
+}
+.polaroid-3 {
+  transform: rotate(-2deg) translate(0px, -15px);
+  z-index: 30;
+}
+
+/* Stack hovers */
+.polaroid-stack:hover .polaroid-1 {
+  transform: rotate(-18deg) translate(-90px, 20px) scale(0.95);
+  z-index: 15;
+}
+
+.polaroid-stack:hover .polaroid-2 {
+  transform: rotate(14deg) translate(90px, -10px) scale(0.98);
+  z-index: 25;
+}
+
+.polaroid-stack:hover .polaroid-3 {
+  transform: rotate(-1deg) translate(0px, -30px) scale(1.06);
+  z-index: 40;
+  box-shadow: 0 15px 45px rgba(107, 54, 84, 0.2);
+}
+
+/* Slideable Carousel for Companions */
+.carousel-container {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE/Edge */
+  scroll-behavior: smooth;
+  padding: 1.5rem 0.5rem;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.carousel-item {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .carousel-item {
+    flex: 0 0 310px;
+  }
+}
+
+/* Mobile active tap scaling feedback (Non-hover fine) */
+@media (pointer: coarse) {
+  .service-card-item:active,
+  .companion-card:active,
+  .testimonial-card:active,
+  a:active,
+  button:active,
+  .wa-main-link:active {
+    transform: scale(0.97) !important;
+    transition: transform 0.1s ease !important;
+  }
+}
+
+
+
+/* Hanging Polaroid Gallery */
+.gallery-panel {
+  -webkit-overflow-scrolling: touch;
+}
+.gallery-panel::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+.gallery-panel.active {
+  cursor: grabbing !important;
+}
+
+.gallery-polaroid-item {
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transform-origin: top center;
+  will-change: transform;
+}
+
+/* Testimonials circular avatars */
+#testimonial-avatars-track div {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              opacity 0.4s ease, 
+              border-color 0.4s ease;
+}
+
+/* Highlighted Service Card (Best Seller / Popular) */
+.service-card-popular {
+  background: linear-gradient(135deg, #6B3654 0%, #A85D82 100%) !important;
+  color: #FBF5F3 !important;
+  border-color: rgba(226, 155, 192, 0.25) !important;
+  box-shadow: 0 20px 45px rgba(107, 54, 84, 0.3) !important;
+  position: relative;
+}
+
+.dark .service-card-popular {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45) !important;
+}
+
+.service-card-popular h4, 
+.service-card-popular .text-mulberry,
+.service-card-popular .text-ink,
+.service-card-popular p,
+.service-card-popular span,
+.service-card-popular li,
+.service-card-popular i:not(.text-sage) {
+  color: #FBF5F3 !important;
+}
+
+.service-card-popular .text-ink\/60,
+.service-card-popular .text-ink\/85,
+.service-card-popular .text-textdark\/60,
+.service-card-popular .text-textdark\/85 {
+  color: rgba(251, 245, 243, 0.8) !important;
+}
+
+/* Badge styling */
+.service-card-popular .bg-mauve {
+  background-color: #FBF5F3 !important;
+  color: #6B3654 !important;
+}
+
+.service-card-popular span[class*="bg-mauve/10"] {
+  background-color: rgba(251, 245, 243, 0.15) !important;
+  color: #FBF5F3 !important;
+  border-color: rgba(251, 245, 243, 0.3) !important;
+}
+
+/* WhatsApp button styling */
+.service-card-popular a[data-service-id] {
+  background-color: #FBF5F3 !important;
+  color: #6B3654 !important;
+  box-shadow: 0 10px 25px rgba(107, 54, 84, 0.2) !important;
+}
+
+.service-card-popular a[data-service-id] span,
+.service-card-popular a[data-service-id] i {
+  color: inherit !important;
+}
+
+.service-card-popular a[data-service-id]:hover {
+  background-color: #FFFFFF !important;
+  color: #52243e !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(107, 54, 84, 0.25) !important;
+}
+
+/* Custom slow rotation for bottom hero badge */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 16s linear infinite;
+}
+
+/* Infinite Marquee Layout & Drag Controls */
+.marquee-row-container {
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.marquee-row-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.marquee-track {
+  width: max-content;
+}
+
+/* Worry Checkpoint Badge & SVG Idle animations */
+.worry-badge svg {
+  animation: badge-idle 3s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes badge-idle {
+  0% { transform: translateY(0) rotate(-3deg); }
+  100% { transform: translateY(-3px) rotate(3deg); }
+}
+
+/* Worry Checkpoint Card Layout Fixes */
+.worry-card {
+  width: 100% !important;
+  min-width: unset !important;
+  max-width: 100% !important;
+  padding: 20px 24px !important;
+  min-height: unset !important;
+  height: auto !important;
+  margin-bottom: 8px !important;
+  flex-shrink: 0 !important;
+}
+
+@media (min-width: 1024px) {
+  .worry-card {
+    width: clamp(420px, 38vw, 560px) !important;
+    min-width: 420px !important;
+    max-width: none !important;
+    padding: 24px 32px !important;
+    margin-bottom: 12px !important;
+  }
+}
+
+.worry-timeline-item:last-child .worry-card {
+  margin-bottom: 0 !important;
+}
+
+.card-number-decoration {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 24px;
+  opacity: 0.08;
+  pointer-events: none;
+  font-family: inherit;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.875rem; /* text-3xl equivalent */
+}

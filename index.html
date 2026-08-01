@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>TBB — Jasa Temani Bandung | Local Companion for Female Traveler</title>
+  <meta name="description" content="TBB (Travel Buddy Bandung) menyediakan layanan jasa guide Bandung khusus perempuan untuk solo traveler. Aman, tepercaya, dan fleksibel.">
+  <meta name="keywords" content="jasa temani bandung, travel buddy bandung, guide bandung perempuan, solo traveler bandung, teman jalan bandung">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TBB — Jasa Temani Bandung">
+  <meta property="og:description" content="Local Companion khusus perempuan traveler di Bandung. Teman perjalanan yang aman, respectful, dan berkesan.">
+  <meta property="og:image" content="assets/images/companion_khusnul.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="TBB — Jasa Temani Bandung">
+  <meta property="twitter:description" content="Local Companion khusus perempuan traveler di Bandung. Teman perjalanan yang aman, respectful, dan berkesan.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            mulberry: {
+              DEFAULT: '#6B3654',
+              dark: '#F0C9DD',
+            },
+            mauve: {
+              DEFAULT: '#A85D82',
+              dark: '#E29BC0',
+            },
+            blush: {
+              DEFAULT: '#D9A0BE',
+              dark: '#B97A9C',
+            },
+            cream: '#FBF5F3',
+            ink: '#2A1620',
+            sage: {
+              DEFAULT: '#7C9885',
+              dark: '#9FBBA8',
+            },
+            bgdark: '#1F1119',
+            surfacedark: '#2B1A25',
+            textdark: '#F5E9EF',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          borderRadius: {
+            '2xl': '1.25rem',
+            '3xl': '2rem',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <!-- GSAP & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Lenis Smooth Scroll CDN -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+</head>
+<body class="transition-theme bg-cream text-ink dark:bg-bgdark dark:text-textdark selection:bg-blush selection:text-mulberry">
+
+
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 w-full transition-theme border-b border-transparent bg-transparent">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-2 select-none">
+        <!-- SVG Ribbon Logo TBB -->
+        <svg class="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#A85D82" />
+              <stop offset="50%" stop-color="#D9A0BE" />
+              <stop offset="100%" stop-color="#6B3654" />
+            </linearGradient>
+          </defs>
+          <!-- Stylized ribbon forming TBB -->
+          <path d="M20 70C20 40 40 20 55 20C70 20 80 35 80 50C80 65 65 80 45 80C25 80 15 65 15 50C15 30 35 15 60 15" stroke="url(#logo-grad)" stroke-width="12" stroke-linecap="round" fill="none"/>
+          <path d="M50 40C50 40 55 50 60 60" stroke="#6B3654" stroke-width="8" stroke-linecap="round" class="dark:stroke-blush-dark"/>
+        </svg>
+        <span class="font-display text-2xl font-bold tracking-tight text-mulberry dark:text-mulberry-dark">TBB</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-8 font-medium">
+        <a href="#services" class="hover:text-mauve dark:hover:text-mauve-dark transition-colors">Layanan</a>
+        <a href="#about" class="hover:text-mauve dark:hover:text-mauve-dark transition-colors">Tentang</a>
+        <a href="#companion" class="hover:text-mauve dark:hover:text-mauve-dark transition-colors">Companion</a>
+        <a href="#testimonials" class="hover:text-mauve dark:hover:text-mauve-dark transition-colors">Testimoni</a>
+        <a href="#kolaborasi" class="hover:text-mauve dark:hover:text-mauve-dark transition-colors">Kolaborasi</a>
+      </nav>
+
+      <!-- Action Buttons (Dark Mode Toggle & CTA) -->
+      <div class="flex items-center gap-4">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="p-2.5 rounded-full border border-purple-100 dark:border-purple-950/40 text-mulberry dark:text-mulberry-dark hover:bg-purple-100/30 dark:hover:bg-purple-950/20 transition-colors" aria-label="Toggle dark mode">
+          <i id="moon-icon" data-lucide="moon" class="w-5 h-5"></i>
+          <i id="sun-icon" data-lucide="sun" class="w-5 h-5 hidden"></i>
+        </button>
+        
+        <!-- Primary CTA Header -->
+        <a href="#" class="wa-main-link hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-mauve text-white hover:bg-mulberry hover:scale-[1.03] active:scale-[0.98] transition-all font-medium text-sm shadow-md shadow-mauve/20">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span>Chat Kami</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-ink dark:text-textdark hover:bg-purple-100/30 dark:hover:bg-purple-950/20 rounded-lg transition-colors" aria-label="Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Nav Panel -->
+    <div id="mobile-nav" class="hidden flex-col bg-cream dark:bg-bgdark border-t border-purple-100/10 px-6 py-4 gap-4 md:hidden animate-fade-in">
+      <a href="#services" class="mobile-nav-link text-lg font-medium hover:text-mauve">Layanan</a>
+      <a href="#about" class="mobile-nav-link text-lg font-medium hover:text-mauve">Tentang</a>
+      <a href="#companion" class="mobile-nav-link text-lg font-medium hover:text-mauve">Companion</a>
+      <a href="#testimonials" class="mobile-nav-link text-lg font-medium hover:text-mauve">Testimoni</a>
+      <a href="#kolaborasi" class="mobile-nav-link text-lg font-medium hover:text-mauve">Kolaborasi</a>
+      <a href="#" class="wa-main-link w-full py-3 rounded-xl bg-mauve text-white font-medium text-center flex items-center justify-center gap-2">
+        <i data-lucide="message-square" class="w-5 h-5"></i>
+        <span>Chat Kami via WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION (Floating Premium Card Container) -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-[88px] pb-8 px-3 md:px-4 bg-cream dark:bg-bgdark transition-theme">
+    
+    <!-- Floating Card wrapper (Overflow visible to allow the bottom tab to stick out) -->
+    <div class="relative w-full max-w-[97vw] lg:max-w-[98vw] mx-auto rounded-[32px] overflow-visible shadow-soft min-h-[82vh] lg:min-h-[86vh] flex items-center justify-center py-10 md:py-16 z-10">
+      
+      <!-- Inner Background Container (Clipped to rounded shape) -->
+      <div class="absolute inset-0 rounded-[32px] overflow-hidden bg-cover bg-center z-0" style="background-image: url('assets/images/hero_background.png');">
+        <!-- Dark gradient overlay for readability -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#1F1119]/45 via-[#1F1119]/60 to-[#1F1119]/95"></div>
+      </div>
+
+      <!-- Content wrapper -->
+      <div class="max-w-7xl w-full mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 text-white">
+        
+        <!-- Text content -->
+        <div class="lg:col-span-7 space-y-6 md:space-y-8 hero-content">
+          
+          <!-- Trust Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-blush border border-white/10 font-semibold text-xs uppercase tracking-wider">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+            <span>100% Female Traveler Friendly</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-tight">
+            Local Companion <br>
+            for Female <span class="font-normal italic text-blush">Traveler</span>
+          </h1>
+          
+          <p class="text-base md:text-lg text-purple-100/80 max-w-xl leading-relaxed">
+            Kami menyediakan layanan jasa guide Bandung khusus perempuan, demi kenyamanan dan rasa aman para traveler selama menjelajahi sudut Kota Kembang.
+          </p>
+
+          <!-- Stacked Companion Avatars -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <div class="flex -space-x-3 overflow-hidden">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-[#1F1119] object-cover" src="assets/images/companion_khusnul.png" alt="Khusnul">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-[#1F1119] object-cover" src="assets/images/companion_hilma.png" alt="Hilma">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-[#1F1119] object-cover" src="assets/images/companion_adzqia.png" alt="Adzqia">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-[#1F1119] object-cover" src="assets/images/companion_atikah.png" alt="Atikah">
+              <div class="inline-flex items-center justify-center h-10 w-10 rounded-full ring-2 ring-[#1F1119] bg-mauve text-white text-xs font-bold font-sans">+2</div>
+            </div>
+            <div class="text-sm font-medium text-white/90">
+              <span class="text-blush font-bold font-display text-lg">500+</span> Traveler sudah kami temani
+            </div>
+          </div>
+
+          <!-- CTA Action Group -->
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <a href="#services" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-3xl bg-mauve text-white font-semibold text-base hover:bg-white hover:text-mulberry hover:scale-[1.03] active:scale-[0.98] transition-all shadow-lg shadow-mauve/20">
+              <span>Lihat Paket Layanan</span>
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="wa-main-link inline-flex items-center justify-center gap-2 px-8 py-4 rounded-3xl bg-white/10 text-white border border-white/20 font-semibold text-base hover:bg-white/20 hover:scale-[1.03] active:scale-[0.98] transition-all">
+              <i data-lucide="message-square" class="w-5 h-5 text-blush"></i>
+              <span>Chat via WhatsApp</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Hero Visual Representation (Floating Polaroid Cards Stack) -->
+        <div class="lg:col-span-5 flex justify-center items-center relative z-0 py-8">
+          
+          <!-- Polaroid Stack -->
+          <div class="polaroid-stack tilt-card" id="hero-tilt-card">
+            
+            <!-- Card 1: Lembang Nature Trek -->
+            <div class="polaroid-card polaroid-1">
+              <img src="assets/images/travel_hills.png" alt="Sunrise Tebing Keraton">
+              <div class="polaroid-label">Lembang Nature Trek</div>
+            </div>
+            
+            <!-- Card 2: Your Companion (Chika) -->
+            <div class="polaroid-card polaroid-2">
+              <img src="assets/images/companion_chika.png" alt="Your Travel Buddy Bandung">
+              <div class="polaroid-label">Outdoor Exploration</div>
+            </div>
+            
+            <!-- Card 3 (Top): Braga Coffee Tour -->
+            <div class="polaroid-card polaroid-3">
+              <img src="assets/images/travel_coffee.png" alt="Cafe Hopping Braga">
+              <div class="polaroid-label">Braga Coffee Tour</div>
+            </div>
+            
+          </div>
+          
+          <!-- Subtle interactive floating icons -->
+          <div class="absolute -top-4 -left-4 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg text-blush animate-bounce -z-10" style="animation-duration: 3s;">
+            <i data-lucide="compass" class="w-6 h-6"></i>
+          </div>
+          <div class="absolute -bottom-6 -right-4 w-14 h-14 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg text-sage-dark animate-bounce -z-10" style="animation-duration: 4s;">
+            <i data-lucide="camera" class="w-6 h-6"></i>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. SIDE-BY-SIDE MASTER SECTION: KENAPA BUTUH TBB & WHY CHOOSE TBB BUDDY -->
+  <section id="about-why-choose" class="py-16 md:py-24 bg-cream dark:bg-bgdark relative border-y border-purple-100/10 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+      
+      <!-- Master Side-by-Side 12-Column Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+        
+        <!-- LEFT COLUMN: KENAPA BUTUH TBB? (Falling Physics Pills Container) -->
+        <div class="lg:col-span-5 flex flex-col justify-between bg-white/80 dark:bg-surfacedark/60 backdrop-blur-md rounded-[40px] p-8 md:p-10 border border-purple-100/80 dark:border-purple-950/40 shadow-[0_15px_45px_rgba(107,54,84,0.04)] relative overflow-hidden h-full min-h-[520px] group">
+          
+          <!-- Top Header Content -->
+          <div class="space-y-4 relative z-10">
+            <div class="flex items-center gap-2">
+              <span class="h-[1px] w-8 bg-mauve dark:bg-blush"></span>
+              <span class="text-xs uppercase font-bold tracking-wider text-mauve dark:text-blush font-sans">
+                THE REALITY OF SOLO TRAVEL
+              </span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-extrabold font-display leading-tight text-mulberry dark:text-mulberry-dark">
+              Kenapa Butuh TBB?
+            </h2>
+            <p class="text-sm md:text-base leading-relaxed text-ink/75 dark:text-textdark/70 font-sans">
+              Bepergian sendirian ke kota baru sering kali memunculkan berbagai kekhawatiran yang menguras energi.
+            </p>
+          </div>
+
+          <!-- Bottom Physics / Falling Pills Container -->
+          <div id="falling-pills-container" class="relative z-10 pt-12 pb-4 flex flex-wrap items-end justify-center gap-3 overflow-visible">
+            
+            <!-- Pill 1 -->
+            <div class="falling-pill inline-block bg-white dark:bg-surfacedark/95 border-2 border-mauve/40 dark:border-blush/40 px-5 py-2.5 rounded-full shadow-[0_8px_20px_rgba(107,54,84,0.1)] text-mulberry dark:text-textdark font-display font-bold text-sm md:text-base hover:scale-105 hover:border-mauve transition-all cursor-pointer select-none -rotate-6">
+              Datang Sendirian
+            </div>
+
+            <!-- Pill 2 -->
+            <div class="falling-pill inline-block bg-white dark:bg-surfacedark/95 border-2 border-mauve/40 dark:border-blush/40 px-5 py-2.5 rounded-full shadow-[0_8px_20px_rgba(107,54,84,0.1)] text-mulberry dark:text-textdark font-display font-bold text-sm md:text-base hover:scale-105 hover:border-mauve transition-all cursor-pointer select-none rotate-3">
+              Bingung Rute
+            </div>
+
+            <!-- Pill 3 -->
+            <div class="falling-pill inline-block bg-white dark:bg-surfacedark/95 border-2 border-mauve/40 dark:border-blush/40 px-5 py-2.5 rounded-full shadow-[0_8px_20px_rgba(107,54,84,0.1)] text-mulberry dark:text-textdark font-display font-bold text-sm md:text-base hover:scale-105 hover:border-mauve transition-all cursor-pointer select-none -rotate-2">
+              Takut Jalan Sendiri
+            </div>
+
+            <!-- Pill 4 -->
+            <div class="falling-pill inline-block bg-white dark:bg-surfacedark/95 border-2 border-mauve/40 dark:border-blush/40 px-5 py-2.5 rounded-full shadow-[0_8px_20px_rgba(107,54,84,0.1)] text-mulberry dark:text-textdark font-display font-bold text-sm md:text-base hover:scale-105 hover:border-mauve transition-all cursor-pointer select-none rotate-4">
+              Salah Area &amp; Jam
+            </div>
+
+            <!-- Pill 5 -->
+            <div class="falling-pill inline-block bg-white dark:bg-surfacedark/95 border-2 border-mauve/40 dark:border-blush/40 px-5 py-2.5 rounded-full shadow-[0_8px_20px_rgba(107,54,84,0.1)] text-mulberry dark:text-textdark font-display font-bold text-sm md:text-base hover:scale-105 hover:border-mauve transition-all cursor-pointer select-none -rotate-4">
+              Capek Itinerary
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: WHY CHOOSE TBB BUDDY? (Spacious 2x2 Grid of 3D Popout Cards) -->
+        <div class="lg:col-span-7 flex flex-col justify-start">
+          
+          <!-- Section Title -->
+          <div class="text-center lg:text-left mb-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-mulberry dark:text-mulberry-dark font-display leading-tight">
+              Why Choose <span class="text-mauve dark:text-mauve-dark">TBB Buddy</span>
+            </h2>
+          </div>
+
+          <!-- 2x2 Advantages Grid (3D Popout Icons + Dual Layered Tray Base Effect) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-14 pt-6">
+            
+            <!-- Card 1: Warlok Bandung Asli -->
+            <div class="relative w-full group">
+              <!-- Layer 1: Bottom 3D Tray Accent Layer -->
+              <div class="absolute inset-0 translate-y-3 bg-[#6B3654] dark:bg-[#4A2038] rounded-[36px] z-0 transition-transform duration-300 group-hover:translate-y-4"></div>
+              <!-- Layer 2: Main Top Card -->
+              <div class="relative z-10 bg-white dark:bg-surfacedark rounded-[36px] pt-12 pb-6 px-6 text-center border border-purple-100/80 dark:border-purple-950/40 shadow-xs group-hover:-translate-y-1 transition-all duration-300 min-h-[220px] flex flex-col items-center justify-start">
+                <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 sm:w-22 sm:h-22 rounded-2xl overflow-hidden shadow-xl p-1 bg-white dark:bg-bgdark border border-purple-100 dark:border-purple-900/40 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
+                  <img src="assets/images/icon_3d_warlok.jpg" alt="Warlok Bandung Asli" class="w-full h-full object-cover rounded-xl shadow-xs pointer-events-none">
+                </div>
+                <h3 class="font-display text-lg font-bold text-mulberry dark:text-textdark leading-tight tracking-wide mb-2 mt-1">Warlok Bandung Asli</h3>
+                <p class="text-xs md:text-sm text-ink/75 dark:text-textdark/75 leading-relaxed font-sans font-normal">
+                  Companion kami adalah penduduk lokal (warlok) asli Bandung yang memahami seluk-beluk, jalan tikus, dan destinasi tersembunyi.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2: Safe & Secure Travel -->
+            <div class="relative w-full group">
+              <!-- Layer 1: Bottom 3D Tray Accent Layer -->
+              <div class="absolute inset-0 translate-y-3 bg-[#6B3654] dark:bg-[#4A2038] rounded-[36px] z-0 transition-transform duration-300 group-hover:translate-y-4"></div>
+              <!-- Layer 2: Main Top Card -->
+              <div class="relative z-10 bg-white dark:bg-surfacedark rounded-[36px] pt-12 pb-6 px-6 text-center border border-purple-100/80 dark:border-purple-950/40 shadow-xs group-hover:-translate-y-1 transition-all duration-300 min-h-[220px] flex flex-col items-center justify-start">
+                <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 sm:w-22 sm:h-22 rounded-2xl overflow-hidden shadow-xl p-1 bg-white dark:bg-bgdark border border-purple-100 dark:border-purple-900/40 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
+                  <img src="assets/images/icon_3d_safe.jpg" alt="Safe & Secure Travel" class="w-full h-full object-cover rounded-xl shadow-xs pointer-events-none">
+                </div>
+                <h3 class="font-display text-lg font-bold text-mulberry dark:text-textdark leading-tight tracking-wide mb-2 mt-1">Safe &amp; Secure Travel</h3>
+                <p class="text-xs md:text-sm text-ink/75 dark:text-textdark/75 leading-relaxed font-sans font-normal">
+                  Pendamping khusus perempuan demi menjaga rasa nyaman, sopan, aman, bebas dari rasa cemas atau rasa dihakimi.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3: Jadwal Fleksibel & Nyaman -->
+            <div class="relative w-full group">
+              <!-- Layer 1: Bottom 3D Tray Accent Layer -->
+              <div class="absolute inset-0 translate-y-3 bg-[#6B3654] dark:bg-[#4A2038] rounded-[36px] z-0 transition-transform duration-300 group-hover:translate-y-4"></div>
+              <!-- Layer 2: Main Top Card -->
+              <div class="relative z-10 bg-white dark:bg-surfacedark rounded-[36px] pt-12 pb-6 px-6 text-center border border-purple-100/80 dark:border-purple-950/40 shadow-xs group-hover:-translate-y-1 transition-all duration-300 min-h-[220px] flex flex-col items-center justify-start">
+                <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 sm:w-22 sm:h-22 rounded-2xl overflow-hidden shadow-xl p-1 bg-white dark:bg-bgdark border border-purple-100 dark:border-purple-900/40 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
+                  <img src="assets/images/icon_3d_flex.jpg" alt="Jadwal Fleksibel & Nyaman" class="w-full h-full object-cover rounded-xl shadow-xs pointer-events-none">
+                </div>
+                <h3 class="font-display text-lg font-bold text-mulberry dark:text-textdark leading-tight tracking-wide mb-2 mt-1">Jadwal Fleksibel &amp; Nyaman</h3>
+                <p class="text-xs md:text-sm text-ink/75 dark:text-textdark/75 leading-relaxed font-sans font-normal">
+                  Perjalanan santai yang fleksibel. Anda yang menentukan ritme liburan Anda sendiri, tanpa diburu-buru jadwal yang kaku.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4: Trusted by Female Travelers -->
+            <div class="relative w-full group">
+              <!-- Layer 1: Bottom 3D Tray Accent Layer -->
+              <div class="absolute inset-0 translate-y-3 bg-[#6B3654] dark:bg-[#4A2038] rounded-[36px] z-0 transition-transform duration-300 group-hover:translate-y-4"></div>
+              <!-- Layer 2: Main Top Card -->
+              <div class="relative z-10 bg-white dark:bg-surfacedark rounded-[36px] pt-12 pb-6 px-6 text-center border border-purple-100/80 dark:border-purple-950/40 shadow-xs group-hover:-translate-y-1 transition-all duration-300 min-h-[220px] flex flex-col items-center justify-start">
+                <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 sm:w-22 sm:h-22 rounded-2xl overflow-hidden shadow-xl p-1 bg-white dark:bg-bgdark border border-purple-100 dark:border-purple-900/40 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
+                  <img src="assets/images/icon_3d_trusted.jpg" alt="Trusted by Female Travelers" class="w-full h-full object-cover rounded-xl shadow-xs pointer-events-none">
+                </div>
+                <h3 class="font-display text-lg font-bold text-mulberry dark:text-textdark leading-tight tracking-wide mb-2 mt-1">Trusted by Female Travelers</h3>
+                <p class="text-xs md:text-sm text-ink/75 dark:text-textdark/75 leading-relaxed font-sans font-normal">
+                  Tarif transparan &amp; jujur. Tak ada mark-up terselubung untuk cafe, belanjaan, oleh-oleh, ataupun tiket destinasi.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. SERVICES SECTION (Core functional section) -->
+  <section id="services" class="py-12 md:py-16 bg-white/60 dark:bg-surfacedark/40 border-y border-purple-100/10">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="text-center max-w-3xl mx-auto mb-10 space-y-4">
+        <span class="text-sm uppercase font-bold tracking-wider text-mauve dark:text-mauve-dark">Pricelist Kami</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-mulberry dark:text-mulberry-dark">Pilih Paket Layanan</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-mauve to-blush mx-auto rounded-full"></div>
+        <p class="text-base md:text-lg text-ink/70 dark:text-textdark/70">
+          Temukan pendampingan sesuai dengan kebutuhan aktivitas yang kamu butuhkan
+        </p>
+      </div>
+
+      <!-- Tab Buttons Selector -->
+      <div class="flex flex-wrap justify-center gap-2 mb-6 max-w-4xl mx-auto">
+        <button class="tab-trigger tab-active px-6 py-3 rounded-full font-bold text-sm md:text-base transition-all flex items-center gap-2 shadow-sm border border-purple-100 dark:border-purple-950/40 text-mulberry dark:text-textdark" data-category="care">
+          <i data-lucide="heart" class="w-4 h-4"></i>
+          <span>TBB Care</span>
+        </button>
+        <button class="tab-trigger px-6 py-3 rounded-full font-bold text-sm md:text-base transition-all flex items-center gap-2 shadow-sm border border-purple-100 dark:border-purple-950/40 text-mulberry dark:text-textdark" data-category="moments">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span>TBB Moments</span>
+        </button>
+        <button class="tab-trigger px-6 py-3 rounded-full font-bold text-sm md:text-base transition-all flex items-center gap-2 shadow-sm border border-purple-100 dark:border-purple-950/40 text-mulberry dark:text-textdark" data-category="explore">
+          <i data-lucide="compass" class="w-4 h-4"></i>
+          <span>TBB Explore</span>
+        </button>
+        <button class="tab-trigger px-6 py-3 rounded-full font-bold text-sm md:text-base transition-all flex items-center gap-2 shadow-sm border border-purple-100 dark:border-purple-950/40 text-mulberry dark:text-textdark" data-category="companion">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          <span>TBB Companion</span>
+        </button>
+      </div>
+
+      <!-- Tab Content Panels -->
+      <div class="services-section pb-8">
+        
+        <!-- PANEL 1: TBB CARE -->
+        <div id="panel-care" class="tab-panel grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="col-span-1 md:col-span-3 text-center pt-2 pb-6">
+            <p class="font-display italic font-semibold text-[#A85D82] dark:text-[#D9A0BE] text-lg md:text-xl lg:text-2xl tracking-wide leading-relaxed">
+              “Teman yang hadir di momen saat kamu membutuhkan dukungan.”
+            </p>
+          </div>
+          
+          <!-- Care Support -->
+          <div class="service-card-item flex flex-col justify-between p-6 md:p-8 rounded-3xl bg-white dark:bg-surfacedark border border-purple-100 dark:border-purple-950 transition-theme hover:shadow-xl">
+            <div class="space-y-6">
+              <div>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-mauve/10 text-mauve dark:text-mauve-dark border border-mauve/25">Tier 1</span>
+                <h4 class="font-bold text-2xl mt-4 text-ink dark:text-textdark">Care Support</h4>
+                <div class="flex items-baseline gap-2 mt-2">
+                  <span class="text-3xl font-extrabold text-mulberry dark:text-mulberry-dark">Rp90.000</span>
+                  <span class="text-sm text-ink/60 dark:text-textdark/60 font-medium">/ 2 Jam</span>
+                </div>
+              </div>
+              <ul class="space-y-3.5 text-sm md:text-base border-t border-purple-50 dark:border-purple-950/50 pt-6">
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Pendamping selama proses</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Bantuan administrasi ringan</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Teman berbincang nyaman</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Konsultasi pra-hari H</span></li>
+              </ul>
+            </div>
+            <a data-service-id="care-support" href="#" class="mt-8 w-full py-4.5 rounded-2xl bg-mauve text-white text-center font-bold text-base hover:bg-mulberry transition-colors shadow-md shadow-mauve/15 flex items-center justify-center gap-2">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+              <span>Order via WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Care Plus -->
+          <div class="service-card-item service-card-popular flex flex-col justify-between p-6 md:p-8 rounded-3xl border border-2 border-mauve dark:border-mauve-dark transition-theme hover:shadow-xl relative">
+            <div class="absolute -top-4 right-6 px-4 py-1 rounded-full bg-mauve text-white text-xs font-bold uppercase tracking-wider">Terpopuler</div>
+            <div class="space-y-6">
+              <div>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-mauve/10 text-mauve dark:text-mauve-dark border border-mauve/25">Tier 2</span>
+                <h4 class="font-bold text-2xl mt-4 text-ink dark:text-textdark">Care Plus</h4>
+                <div class="flex items-baseline gap-2 mt-2">
+                  <span class="text-3xl font-extrabold text-mulberry dark:text-mulberry-dark">Rp169.000</span>
+                  <span class="text-sm text-ink/60 dark:text-textdark/60 font-medium">/ 4 Jam</span>
+                </div>
+              </div>
+              <ul class="space-y-3.5 text-sm md:text-base border-t border-purple-50 dark:border-purple-950/50 pt-6">
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Semua benefit Care Support</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Fleksibel mengikuti antrean</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Pendamping hingga proses selesai</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Bantuan koordinasi ringan</span></li>
+              </ul>
+            </div>
+            <a data-service-id="care-plus" href="#" class="mt-8 w-full py-4.5 rounded-2xl bg-mauve text-white text-center font-bold text-base hover:bg-mulberry transition-colors shadow-md shadow-mauve/15 flex items-center justify-center gap-2">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+              <span>Order via WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Care Full -->
+          <div class="service-card-item flex flex-col justify-between p-6 md:p-8 rounded-3xl bg-white dark:bg-surfacedark border border-purple-100 dark:border-purple-950 transition-theme hover:shadow-xl">
+            <div class="space-y-6">
+              <div>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-mauve/10 text-mauve dark:text-mauve-dark border border-mauve/25">Tier 3</span>
+                <h4 class="font-bold text-2xl mt-4 text-ink dark:text-textdark">Care Full</h4>
+                <div class="flex items-baseline gap-2 mt-2">
+                  <span class="text-3xl font-extrabold text-mulberry dark:text-mulberry-dark">Rp299.000</span>
+                  <span class="text-sm text-ink/60 dark:text-textdark/60 font-medium">/ 8 Jam</span>
+                </div>
+              </div>
+              <ul class="space-y-3.5 text-sm md:text-base border-t border-purple-50 dark:border-purple-950/50 pt-6">
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Pendamping penuh selama 8 jam</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Mendampingi seluruh proses</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Fleksibel sesuai kebutuhan</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Dokumentasi administrasi ringan</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Dukungan emosional nyaman</span></li>
+              </ul>
+            </div>
+            <a data-service-id="care-full" href="#" class="mt-8 w-full py-4.5 rounded-2xl bg-mauve text-white text-center font-bold text-base hover:bg-mulberry transition-colors shadow-md shadow-mauve/15 flex items-center justify-center gap-2">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+              <span>Order via WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- PANEL 2: TBB MOMENTS -->
+        <div id="panel-moments" class="tab-panel hidden grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="col-span-1 md:col-span-3 text-center pt-2 pb-6">
+            <p class="font-display italic font-semibold text-[#A85D82] dark:text-[#D9A0BE] text-lg md:text-xl lg:text-2xl tracking-wide leading-relaxed">
+              “Rayakan setiap momen spesial bersama seseorang yang siap menemani.”
+            </p>
+          </div>
+
+          <!-- Moments Mini -->
+          <div class="service-card-item flex flex-col justify-between p-6 md:p-8 rounded-3xl bg-white dark:bg-surfacedark border border-purple-100 dark:border-purple-950 transition-theme hover:shadow-xl">
+            <div class="space-y-6">
+              <div>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-mauve/10 text-mauve dark:text-mauve-dark border border-mauve/25">Tier 1</span>
+                <h4 class="font-bold text-2xl mt-4 text-ink dark:text-textdark">Moments Mini</h4>
+                <div class="flex items-baseline gap-2 mt-2">
+                  <span class="text-3xl font-extrabold text-mulberry dark:text-mulberry-dark">Rp199.000</span>
+                  <span class="text-sm text-ink/60 dark:text-textdark/60 font-medium">/ 3 Jam</span>
+                </div>
+              </div>
+              <ul class="space-y-3.5 text-sm md:text-base border-t border-purple-50 dark:border-purple-950/50 pt-6">
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Pendamping acara personal</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Dokumentasi foto & video HP</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Bantu ambil foto candid</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Teman merayakan momen</span></li>
+              </ul>
+            </div>
+            <a data-service-id="moments-mini" href="#" class="mt-8 w-full py-4.5 rounded-2xl bg-mauve text-white text-center font-bold text-base hover:bg-mulberry transition-colors shadow-md shadow-mauve/15 flex items-center justify-center gap-2">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+              <span>Order via WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Moments Classic -->
+          <div class="service-card-item service-card-popular flex flex-col justify-between p-6 md:p-8 rounded-3xl border border-2 border-mauve dark:border-mauve-dark transition-theme hover:shadow-xl relative">
+            <div class="absolute -top-4 right-6 px-4 py-1 rounded-full bg-mauve text-white text-xs font-bold uppercase tracking-wider">Rekomendasi</div>
+            <div class="space-y-6">
+              <div>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-mauve/10 text-mauve dark:text-mauve-dark border border-mauve/25">Tier 2</span>
+                <h4 class="font-bold text-2xl mt-4 text-ink dark:text-textdark">Moments Classic</h4>
+                <div class="flex items-baseline gap-2 mt-2">
+                  <span class="text-3xl font-extrabold text-mulberry dark:text-mulberry-dark">Rp299.000</span>
+                  <span class="text-sm text-ink/60 dark:text-textdark/60 font-medium">/ 5 Jam</span>
+                </div>
+              </div>
+              <ul class="space-y-3.5 text-sm md:text-base border-t border-purple-50 dark:border-purple-950/50 pt-6">
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Semua benefit Moments Mini</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Rekomendasi cafe / resto aesthetic</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Dokumentasi lebih lengkap</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Fleksibel mengikuti acara</span></li>
+              </ul>
+            </div>
+            <a data-service-id="moments-classic" href="#" class="mt-8 w-full py-4.5 rounded-2xl bg-mauve text-white text-center font-bold text-base hover:bg-mulberry transition-colors shadow-md shadow-mauve/15 flex items-center justify-center gap-2">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+              <span>Order via WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Moments Signature -->
+          <div class="service-card-item flex flex-col justify-between p-6 md:p-8 rounded-3xl bg-white dark:bg-surfacedark border border-purple-100 dark:border-purple-950 transition-theme hover:shadow-xl">
+            <div class="space-y-6">
+              <div>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-mauve/10 text-mauve dark:text-mauve-dark border border-mauve/25">Tier 3</span>
+                <h4 class="font-bold text-2xl mt-4 text-ink dark:text-textdark">Moments Signature</h4>
+                <div class="flex items-baseline gap-2 mt-2">
+                  <span class="text-3xl font-extrabold text-mulberry dark:text-mulberry-dark">Rp449.000</span>
+                  <span class="text-sm text-ink/60 dark:text-textdark/60 font-medium">/ 8 Jam</span>
+                </div>
+              </div>
+              <ul class="space-y-3.5 text-sm md:text-base border-t border-purple-50 dark:border-purple-950/50 pt-6">
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Full day event companion</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Dokumentasi sepanjang acara</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Bantuan penyusunan itinerary</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Bantu abadikan setiap momen</span></li>
+              </ul>
+            </div>
+            <a data-service-id="moments-signature" href="#" class="mt-8 w-full py-4.5 rounded-2xl bg-mauve text-white text-center font-bold text-base hover:bg-mulberry transition-colors shadow-md shadow-mauve/15 flex items-center justify-center gap-2">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+              <span>Order via WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- PANEL 3: TBB EXPLORE -->
+        <div id="panel-explore" class="tab-panel hidden grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="col-span-1 md:col-span-3 text-center pt-2 pb-6">
+            <p class="font-display italic font-semibold text-[#A85D82] dark:text-[#D9A0BE] text-lg md:text-xl lg:text-2xl tracking-wide leading-relaxed">
+              “Explore Bandung bersama local buddy.”
+            </p>
+          </div>
+
+          <!-- Explore Start -->
+          <div class="service-card-item flex flex-col justify-between p-6 md:p-8 rounded-3xl bg-white dark:bg-surfacedark border border-purple-100 dark:border-purple-950 transition-theme hover:shadow-xl">
+            <div class="space-y-6">
+              <div>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-mauve/10 text-mauve dark:text-mauve-dark border border-mauve/25">Tier 1</span>
+                <h4 class="font-bold text-2xl mt-4 text-ink dark:text-textdark">Explore Start</h4>
+                <div class="flex items-baseline gap-2 mt-2">
+                  <span class="text-3xl font-extrabold text-mulberry dark:text-mulberry-dark">Rp250.000</span>
+                  <span class="text-sm text-ink/60 dark:text-textdark/60 font-medium">/ 5 Jam</span>
+                </div>
+              </div>
+              <ul class="space-y-3.5 text-sm md:text-base border-t border-purple-50 dark:border-purple-950/50 pt-6">
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Local Buddy (Pendamping lokal)</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Rekomendasi Itinerary</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Rekomendasi Hidden Gem</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Dokumentasi foto & video</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Teman berbincang hangat</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Bantuan navigasi lokal</span></li>
+              </ul>
+            </div>
+            <a data-service-id="explore-start" href="#" class="mt-8 w-full py-4.5 rounded-2xl bg-mauve text-white text-center font-bold text-base hover:bg-mulberry transition-colors shadow-md shadow-mauve/15 flex items-center justify-center gap-2">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+              <span>Order via WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Explore Day -->
+          <div class="service-card-item service-card-popular flex flex-col justify-between p-6 md:p-8 rounded-3xl border border-2 border-mauve dark:border-mauve-dark transition-theme hover:shadow-xl relative">
+            <div class="absolute -top-4 right-6 px-4 py-1 rounded-full bg-mauve text-white text-xs font-bold uppercase tracking-wider">Best Seller</div>
+            <div class="space-y-6">
+              <div>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-mauve/10 text-mauve dark:text-mauve-dark border border-mauve/25">Tier 2</span>
+                <h4 class="font-bold text-2xl mt-4 text-ink dark:text-textdark">Explore Day</h4>
+                <div class="flex items-baseline gap-2 mt-2">
+                  <span class="text-3xl font-extrabold text-mulberry dark:text-mulberry-dark">Rp399.000</span>
+                  <span class="text-sm text-ink/60 dark:text-textdark/60 font-medium">/ 8 Jam</span>
+                </div>
+              </div>
+              <ul class="space-y-3.5 text-sm md:text-base border-t border-purple-50 dark:border-purple-950/50 pt-6">
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Semua benefit Explore Start</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Destinasi tak terbatas (sesuai durasi)</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Dokumentasi lebih detail</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Bebas ubah itinerary di tengah jalan</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Tips kuliner & pusat oleh-oleh</span></li>
+              </ul>
+            </div>
+            <a data-service-id="explore-day" href="#" class="mt-8 w-full py-4.5 rounded-2xl bg-mauve text-white text-center font-bold text-base hover:bg-mulberry transition-colors shadow-md shadow-mauve/15 flex items-center justify-center gap-2">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+              <span>Order via WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Explore Max -->
+          <div class="service-card-item flex flex-col justify-between p-6 md:p-8 rounded-3xl bg-white dark:bg-surfacedark border border-purple-100 dark:border-purple-950 transition-theme hover:shadow-xl">
+            <div class="space-y-6">
+              <div>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-mauve/10 text-mauve dark:text-mauve-dark border border-mauve/25">Tier 3</span>
+                <h4 class="font-bold text-2xl mt-4 text-ink dark:text-textdark">Explore Max</h4>
+                <div class="flex items-baseline gap-2 mt-2">
+                  <span class="text-3xl font-extrabold text-mulberry dark:text-mulberry-dark">Rp549.000</span>
+                  <span class="text-sm text-ink/60 dark:text-textdark/60 font-medium">/ 10-12 Jam</span>
+                </div>
+              </div>
+              <ul class="space-y-3.5 text-sm md:text-base border-t border-purple-50 dark:border-purple-950/50 pt-6">
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Full Day Exploration</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Sunrise sampai Night Trip</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Dokumentasi premium (smartphone)</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Pendampingan penuh kenyamanan</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Penyusunan itinerary custom</span></li>
+              </ul>
+            </div>
+            <a data-service-id="explore-max" href="#" class="mt-8 w-full py-4.5 rounded-2xl bg-mauve text-white text-center font-bold text-base hover:bg-mulberry transition-colors shadow-md shadow-mauve/15 flex items-center justify-center gap-2">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+              <span>Order via WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- PANEL 4: TBB COMPANION -->
+        <div id="panel-companion" class="tab-panel hidden grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="col-span-1 md:col-span-3 text-center pt-2 pb-6">
+            <p class="font-display italic font-semibold text-[#A85D82] dark:text-[#D9A0BE] text-lg md:text-xl lg:text-2xl tracking-wide leading-relaxed">
+              “Untuk setiap aktivitas yang terasa lebih nyaman jika ditemani.”
+            </p>
+          </div>
+
+          <!-- Companion Short -->
+          <div class="service-card-item flex flex-col justify-between p-6 md:p-8 rounded-3xl bg-white dark:bg-surfacedark border border-purple-100 dark:border-purple-950 transition-theme hover:shadow-xl">
+            <div class="space-y-6">
+              <div>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-mauve/10 text-mauve dark:text-mauve-dark border border-mauve/25">Tier 1</span>
+                <h4 class="font-bold text-2xl mt-4 text-ink dark:text-textdark">Companion Short</h4>
+                <div class="flex items-baseline gap-2 mt-2">
+                  <span class="text-3xl font-extrabold text-mulberry dark:text-mulberry-dark">Rp120.000</span>
+                  <span class="text-sm text-ink/60 dark:text-textdark/60 font-medium">/ 2 Jam</span>
+                </div>
+              </div>
+              <ul class="space-y-3.5 text-sm md:text-base border-t border-purple-50 dark:border-purple-950/50 pt-6">
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Teman beraktivitas personal</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Dokumentasi dokumenter ringan</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Jadwal yang fleksibel</span></li>
+              </ul>
+            </div>
+            <a data-service-id="companion-short" href="#" class="mt-8 w-full py-4.5 rounded-2xl bg-mauve text-white text-center font-bold text-base hover:bg-mulberry transition-colors shadow-md shadow-mauve/15 flex items-center justify-center gap-2">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+              <span>Order via WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Companion Flex -->
+          <div class="service-card-item service-card-popular flex flex-col justify-between p-6 md:p-8 rounded-3xl border border-2 border-mauve dark:border-mauve-dark transition-theme hover:shadow-xl relative">
+            <div class="absolute -top-4 right-6 px-4 py-1 rounded-full bg-mauve text-white text-xs font-bold uppercase tracking-wider">Fleksibel</div>
+            <div class="space-y-6">
+              <div>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-mauve/10 text-mauve dark:text-mauve-dark border border-mauve/25">Tier 2</span>
+                <h4 class="font-bold text-2xl mt-4 text-ink dark:text-textdark">Companion Flex</h4>
+                <div class="flex items-baseline gap-2 mt-2">
+                  <span class="text-3xl font-extrabold text-mulberry dark:text-mulberry-dark">Rp200.000</span>
+                  <span class="text-sm text-ink/60 dark:text-textdark/60 font-medium">/ 4 Jam</span>
+                </div>
+              </div>
+              <ul class="space-y-3.5 text-sm md:text-base border-t border-purple-50 dark:border-purple-950/50 pt-6">
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Semua benefit Companion Short</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Durasi pendampingan lebih lama</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Rekomendasi tempat yang pas</span></li>
+              </ul>
+            </div>
+            <a data-service-id="companion-flex" href="#" class="mt-8 w-full py-4.5 rounded-2xl bg-mauve text-white text-center font-bold text-base hover:bg-mulberry transition-colors shadow-md shadow-mauve/15 flex items-center justify-center gap-2">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+              <span>Order via WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Companion Day -->
+          <div class="service-card-item flex flex-col justify-between p-6 md:p-8 rounded-3xl bg-white dark:bg-surfacedark border border-purple-100 dark:border-purple-950 transition-theme hover:shadow-xl">
+            <div class="space-y-6">
+              <div>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-mauve/10 text-mauve dark:text-mauve-dark border border-mauve/25">Tier 3</span>
+                <h4 class="font-bold text-2xl mt-4 text-ink dark:text-textdark">Companion Day</h4>
+                <div class="flex items-baseline gap-2 mt-2">
+                  <span class="text-3xl font-extrabold text-mulberry dark:text-mulberry-dark">Rp379.000</span>
+                  <span class="text-sm text-ink/60 dark:text-textdark/60 font-medium">/ 8 Jam</span>
+                </div>
+              </div>
+              <ul class="space-y-3.5 text-sm md:text-base border-t border-purple-50 dark:border-purple-950/50 pt-6">
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Full Day Companion (8 Jam)</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Dokumentasi lengkap aktivitas</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Mengikuti itinerary pribadi customer</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage mt-0.5"></i> <span>Support penuh segala aktivitas</span></li>
+              </ul>
+            </div>
+            <a data-service-id="companion-day" href="#" class="mt-8 w-full py-4.5 rounded-2xl bg-mauve text-white text-center font-bold text-base hover:bg-mulberry transition-colors shadow-md shadow-mauve/15 flex items-center justify-center gap-2">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+              <span>Order via WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <!-- Semua Layanan TBB Sudah Termasuk – Integrated Inclusions Grid -->
+      <div class="mt-14 space-y-6 pt-2">
+        <div class="flex items-center gap-2">
+          <span class="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xs shadow-xs">
+            <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+          </span>
+          <h4 class="font-sans font-bold text-xs uppercase tracking-wider text-emerald-800 dark:text-emerald-400 text-left">
+            Semua Layanan TBB Sudah Termasuk:
+          </h4>
+        </div>
+
+        <!-- 6-Column Horizontal Grid (Inclusions: Solid White Cards + Sage/Emerald Accents) -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
+
+          <!-- Card 1: Travel Buddy Terseleksi -->
+          <div class="bg-white dark:bg-surfacedark rounded-[24px] border border-emerald-100 dark:border-emerald-950/40 p-5 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.02)] min-h-[160px] hover:shadow-[0_12px_40px_rgba(16,185,129,0.08)] hover:scale-[1.03] transition-all duration-300 relative group">
+            <span class="absolute top-3 right-3 text-emerald-500 opacity-60 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+            </span>
+            <div class="w-12 h-12 rounded-full bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center mb-4 text-emerald-600 dark:text-emerald-400 border border-emerald-100/80 dark:border-emerald-900/30">
+              <i data-lucide="user-check" class="w-6 h-6"></i>
+            </div>
+            <span class="font-sans font-bold text-xs md:text-sm text-ink dark:text-textdark leading-tight">Travel Buddy<br>terseleksi ketat</span>
+          </div>
+
+          <!-- Card 2: Konsultasi Pre-Hari H -->
+          <div class="bg-white dark:bg-surfacedark rounded-[24px] border border-emerald-100 dark:border-emerald-950/40 p-5 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.02)] min-h-[160px] hover:shadow-[0_12px_40px_rgba(16,185,129,0.08)] hover:scale-[1.03] transition-all duration-300 relative group">
+            <span class="absolute top-3 right-3 text-emerald-500 opacity-60 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+            </span>
+            <div class="w-12 h-12 rounded-full bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center mb-4 text-emerald-600 dark:text-emerald-400 border border-emerald-100/80 dark:border-emerald-900/30">
+              <i data-lucide="message-square" class="w-6 h-6"></i>
+            </div>
+            <span class="font-sans font-bold text-xs md:text-sm text-ink dark:text-textdark leading-tight">Konsultasi<br>kebutuhan pra-hari H</span>
+          </div>
+
+          <!-- Card 3: Dokumentasi Foto/Video HP -->
+          <div class="bg-white dark:bg-surfacedark rounded-[24px] border border-emerald-100 dark:border-emerald-950/40 p-5 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.02)] min-h-[160px] hover:shadow-[0_12px_40px_rgba(16,185,129,0.08)] hover:scale-[1.03] transition-all duration-300 relative group">
+            <span class="absolute top-3 right-3 text-emerald-500 opacity-60 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+            </span>
+            <div class="w-12 h-12 rounded-full bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center mb-4 text-emerald-600 dark:text-emerald-400 border border-emerald-100/80 dark:border-emerald-900/30">
+              <i data-lucide="smartphone" class="w-6 h-6"></i>
+            </div>
+            <span class="font-sans font-bold text-xs md:text-sm text-ink dark:text-textdark leading-tight">Dokumentasi<br>foto/video HP</span>
+          </div>
+
+          <!-- Card 4: Ramah, Komunikatif & Privat -->
+          <div class="bg-white dark:bg-surfacedark rounded-[24px] border border-emerald-100 dark:border-emerald-950/40 p-5 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.02)] min-h-[160px] hover:shadow-[0_12px_40px_rgba(16,185,129,0.08)] hover:scale-[1.03] transition-all duration-300 relative group">
+            <span class="absolute top-3 right-3 text-emerald-500 opacity-60 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+            </span>
+            <div class="w-12 h-12 rounded-full bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center mb-4 text-emerald-600 dark:text-emerald-400 border border-emerald-100/80 dark:border-emerald-900/30">
+              <i data-lucide="heart" class="w-6 h-6"></i>
+            </div>
+            <span class="font-sans font-bold text-xs md:text-sm text-ink dark:text-textdark leading-tight">Ramah, komunikatif<br>&amp; privat</span>
+          </div>
+
+          <!-- Card 5: Rekomendasi Tempat Terpercaya -->
+          <div class="bg-white dark:bg-surfacedark rounded-[24px] border border-emerald-100 dark:border-emerald-950/40 p-5 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.02)] min-h-[160px] hover:shadow-[0_12px_40px_rgba(16,185,129,0.08)] hover:scale-[1.03] transition-all duration-300 relative group">
+            <span class="absolute top-3 right-3 text-emerald-500 opacity-60 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+            </span>
+            <div class="w-12 h-12 rounded-full bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center mb-4 text-emerald-600 dark:text-emerald-400 border border-emerald-100/80 dark:border-emerald-900/30">
+              <i data-lucide="map-pin" class="w-6 h-6"></i>
+            </div>
+            <span class="font-sans font-bold text-xs md:text-sm text-ink dark:text-textdark leading-tight">Rekomendasi<br>tempat terpercaya</span>
+          </div>
+
+          <!-- Card 6: Pendampingan Fleksibel & Adaptif -->
+          <div class="bg-white dark:bg-surfacedark rounded-[24px] border border-emerald-100 dark:border-emerald-950/40 p-5 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.02)] min-h-[160px] hover:shadow-[0_12px_40px_rgba(16,185,129,0.08)] hover:scale-[1.03] transition-all duration-300 relative group">
+            <span class="absolute top-3 right-3 text-emerald-500 opacity-60 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+            </span>
+            <div class="w-12 h-12 rounded-full bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center mb-4 text-emerald-600 dark:text-emerald-400 border border-emerald-100/80 dark:border-emerald-900/30">
+              <i data-lucide="activity" class="w-6 h-6"></i>
+            </div>
+            <span class="font-sans font-bold text-xs md:text-sm text-ink dark:text-textdark leading-tight">Pendampingan<br>fleksibel &amp; adaptif</span>
+          </div>
+
+        </div>
+
+
+
+        <!-- Yang Belum Termasuk – Integrated Exclusions Grid (Dashed Border + Soft Muted Style) -->
+        <div class="mt-10 space-y-6 pt-6 border-t border-purple-100/40 dark:border-purple-950/30">
+          <div class="flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-mauve/15 dark:bg-mauve-dark/15 text-mauve dark:text-mauve-dark flex items-center justify-center text-xs">
+              <i data-lucide="info" class="w-3.5 h-3.5"></i>
+            </span>
+            <h4 class="font-sans font-bold text-xs uppercase tracking-wider text-mauve/85 dark:text-mauve-dark/85 text-left">
+              Yang Belum Termasuk (Biaya / Add-on Terpisah):
+            </h4>
+          </div>
+
+          <!-- 6-Column Horizontal Grid (Exclusions: Dashed Border + Muted Soft Tint) -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
+
+            <!-- Card 1: Tiket Masuk Destinasi -->
+            <div class="bg-cream/40 dark:bg-bgdark/40 rounded-[24px] border border-dashed border-purple-200/80 dark:border-purple-950/60 p-5 flex flex-col items-center justify-center text-center min-h-[160px] hover:border-mauve/60 hover:bg-white/60 dark:hover:bg-surfacedark/40 transition-all duration-300 relative group">
+              <span class="absolute top-2.5 right-3 text-[9px] font-semibold text-mauve/60 dark:text-blush/60 bg-purple-100/40 dark:bg-purple-950/40 px-2 py-0.5 rounded-md">Exclusion</span>
+              <div class="w-11 h-11 rounded-full bg-mauve/10 dark:bg-mauve-dark/10 flex items-center justify-center mb-3.5 text-mauve/80 dark:text-mauve-dark/80">
+                <i data-lucide="ticket" class="w-5.5 h-5.5"></i>
+              </div>
+              <span class="font-sans font-semibold text-xs md:text-sm text-ink/80 dark:text-textdark/80 leading-tight">Tiket masuk<br>destinasi</span>
+            </div>
+
+            <!-- Card 2: Transportasi Operasional -->
+            <div class="bg-cream/40 dark:bg-bgdark/40 rounded-[24px] border border-dashed border-purple-200/80 dark:border-purple-950/60 p-5 flex flex-col items-center justify-center text-center min-h-[160px] hover:border-mauve/60 hover:bg-white/60 dark:hover:bg-surfacedark/40 transition-all duration-300 relative group">
+              <span class="absolute top-2.5 right-3 text-[9px] font-semibold text-mauve/60 dark:text-blush/60 bg-purple-100/40 dark:bg-purple-950/40 px-2 py-0.5 rounded-md">Exclusion</span>
+              <div class="w-11 h-11 rounded-full bg-mauve/10 dark:bg-mauve-dark/10 flex items-center justify-center mb-3.5 text-mauve/80 dark:text-mauve-dark/80">
+                <i data-lucide="car" class="w-5.5 h-5.5"></i>
+              </div>
+              <span class="font-sans font-semibold text-xs md:text-sm text-ink/80 dark:text-textdark/80 leading-tight">Transportasi<br>operasional</span>
+            </div>
+
+            <!-- Card 3: Parkir & Tarif Tol -->
+            <div class="bg-cream/40 dark:bg-bgdark/40 rounded-[24px] border border-dashed border-purple-200/80 dark:border-purple-950/60 p-5 flex flex-col items-center justify-center text-center min-h-[160px] hover:border-mauve/60 hover:bg-white/60 dark:hover:bg-surfacedark/40 transition-all duration-300 relative group">
+              <span class="absolute top-2.5 right-3 text-[9px] font-semibold text-mauve/60 dark:text-blush/60 bg-purple-100/40 dark:bg-purple-950/40 px-2 py-0.5 rounded-md">Exclusion</span>
+              <div class="w-11 h-11 rounded-full bg-mauve/10 dark:bg-mauve-dark/10 flex items-center justify-center mb-3.5 text-mauve/80 dark:text-mauve-dark/80">
+                <i data-lucide="shield-alert" class="w-5.5 h-5.5"></i>
+              </div>
+              <span class="font-sans font-semibold text-xs md:text-sm text-ink/80 dark:text-textdark/80 leading-tight">Parkir &amp;<br>tarif tol</span>
+            </div>
+
+            <!-- Card 4: Konsumsi Companion -->
+            <div class="bg-cream/40 dark:bg-bgdark/40 rounded-[24px] border border-dashed border-purple-200/80 dark:border-purple-950/60 p-5 flex flex-col items-center justify-center text-center min-h-[160px] hover:border-mauve/60 hover:bg-white/60 dark:hover:bg-surfacedark/40 transition-all duration-300 relative group">
+              <span class="absolute top-2.5 right-3 text-[9px] font-semibold text-mauve/60 dark:text-blush/60 bg-purple-100/40 dark:bg-purple-950/40 px-2 py-0.5 rounded-md">Exclusion</span>
+              <div class="w-11 h-11 rounded-full bg-mauve/10 dark:bg-mauve-dark/10 flex items-center justify-center mb-3.5 text-mauve/80 dark:text-mauve-dark/80">
+                <i data-lucide="utensils" class="w-5.5 h-5.5"></i>
+              </div>
+              <span class="font-sans font-semibold text-xs md:text-sm text-ink/80 dark:text-textdark/80 leading-tight">Konsumsi<br>companion</span>
+            </div>
+
+            <!-- Card 5: Pengeluaran Pribadi Customer -->
+            <div class="bg-cream/40 dark:bg-bgdark/40 rounded-[24px] border border-dashed border-purple-200/80 dark:border-purple-950/60 p-5 flex flex-col items-center justify-center text-center min-h-[160px] hover:border-mauve/60 hover:bg-white/60 dark:hover:bg-surfacedark/40 transition-all duration-300 relative group">
+              <span class="absolute top-2.5 right-3 text-[9px] font-semibold text-mauve/60 dark:text-blush/60 bg-purple-100/40 dark:bg-purple-950/40 px-2 py-0.5 rounded-md">Exclusion</span>
+              <div class="w-11 h-11 rounded-full bg-mauve/10 dark:bg-mauve-dark/10 flex items-center justify-center mb-3.5 text-mauve/80 dark:text-mauve-dark/80">
+                <i data-lucide="credit-card" class="w-5.5 h-5.5"></i>
+              </div>
+              <span class="font-sans font-semibold text-xs md:text-sm text-ink/80 dark:text-textdark/80 leading-tight">Pengeluaran<br>pribadi customer</span>
+            </div>
+
+            <!-- Card 6: Kamera Profesional Add-on -->
+            <div class="bg-cream/40 dark:bg-bgdark/40 rounded-[24px] border border-dashed border-purple-200/80 dark:border-purple-950/60 p-5 flex flex-col items-center justify-center text-center min-h-[160px] hover:border-mauve/60 hover:bg-white/60 dark:hover:bg-surfacedark/40 transition-all duration-300 relative group">
+              <span class="absolute top-2.5 right-3 text-[9px] font-semibold text-mauve/60 dark:text-blush/60 bg-purple-100/40 dark:bg-purple-950/40 px-2 py-0.5 rounded-md">Exclusion</span>
+              <div class="w-11 h-11 rounded-full bg-mauve/10 dark:bg-mauve-dark/10 flex items-center justify-center mb-3.5 text-mauve/80 dark:text-mauve-dark/80">
+                <i data-lucide="camera" class="w-5.5 h-5.5"></i>
+              </div>
+              <span class="font-sans font-semibold text-xs md:text-sm text-ink/80 dark:text-textdark/80 leading-tight">Dokumentasi kamera<br>profesional (add-on)</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 5.5 HANGING GALLERY SECTION ("Every Picture Holds a Story") -->
+  <section class="py-16 md:py-24 overflow-hidden bg-cream dark:bg-bgdark relative border-t border-purple-100/10">
+    
+    <!-- Virtual hanging wire (Dashed cable) -->
+    <div class="absolute top-[45%] left-0 right-0 h-[2px] border-t border-dashed border-purple-200/20 z-0 hidden md:block"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+        <span class="text-xs uppercase font-bold tracking-wider text-mauve dark:text-mauve-dark px-3 py-1 rounded-full bg-mauve/10 border border-mauve/20">Travel Memories</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-mulberry dark:text-mulberry-dark leading-tight">
+          Every Picture <span class="font-normal italic text-mauve dark:text-blush">Holds a Story</span>
+        </h2>
+        <p class="text-sm md:text-base text-ink/70 dark:text-textdark/70">
+          Dokumentasi keseruan para traveler wanita menjelajahi Bandung bersama TBB companion.
+        </p>
+      </div>
+
+      <!-- Tab Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-3 mb-10">
+        <button data-gallery-tab="care" class="gallery-tab-btn bg-mauve text-white border border-mauve px-5 py-2 rounded-full font-semibold text-sm shadow-sm select-none transition-all duration-200">TBB Care</button>
+        <button data-gallery-tab="moments" class="gallery-tab-btn border border-purple-100 dark:border-purple-950/40 text-ink/75 dark:text-textdark/75 hover:border-mauve hover:text-mauve px-5 py-2 rounded-full font-semibold text-sm shadow-sm select-none transition-all duration-200">TBB Moments</button>
+        <button data-gallery-tab="explore" class="gallery-tab-btn border border-purple-100 dark:border-purple-950/40 text-ink/75 dark:text-textdark/75 hover:border-mauve hover:text-mauve px-5 py-2 rounded-full font-semibold text-sm shadow-sm select-none transition-all duration-200">TBB Explore</button>
+        <button data-gallery-tab="companion" class="gallery-tab-btn border border-purple-100 dark:border-purple-950/40 text-ink/75 dark:text-textdark/75 hover:border-mauve hover:text-mauve px-5 py-2 rounded-full font-semibold text-sm shadow-sm select-none transition-all duration-200">TBB Companion</button>
+      </div>
+
+      <!-- Panels Wrapper (Single unified horizontal draggable slider) -->
+      <div class="gallery-panels-container relative overflow-hidden">
+        
+        <div id="gallery-main-slider" class="gallery-panel flex flex-nowrap gap-8 pb-8 pt-8 overflow-x-auto scrollbar-none snap-x cursor-grab active:cursor-grabbing select-none px-8 max-w-full relative">
+          
+          <!-- ==================== CATEGORY: CARE ==================== -->
+          <!-- Card 1 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="care" data-base-rotation="-6">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-emerald-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-emerald-700"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/travel_coffee.png" alt="Braga Coffee Tour" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Care</span>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Braga Coffee Tour</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="care" data-base-rotation="4">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-sky-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-sky-700"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/companion_hilma.png" alt="Care Support Hilma" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Care</span>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Care Support Hilma</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="care" data-base-rotation="-4">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-mauve shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-mulberry"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/companion_atikah.png" alt="Care Support Atikah" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Care</span>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Care Support Atikah</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="care" data-base-rotation="5">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-yellow-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-yellow-700"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/companion_khusnul.png" alt="Cozy Cafe Chat" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Care</span>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Cozy Cafe Chat</p>
+            </div>
+          </div>
+
+          <!-- ==================== CATEGORY: MOMENTS ==================== -->
+          <!-- Card 5 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="moments" data-base-rotation="-5">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-zinc-800 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-black"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/hero_background.png" alt="Braga Walk" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Moments</span>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Braga Golden Hour</p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="moments" data-base-rotation="5">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-orange-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-orange-700"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/companion_bella.png" alt="Moments with Bella" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Moments</span>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Aesthetic Braga Tour</p>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="moments" data-base-rotation="-3">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-yellow-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-yellow-700"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/companion_adzqia.png" alt="Moments with Adzqia" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Moments</span>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Braga Photo Session</p>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="moments" data-base-rotation="6">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-blue-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-blue-700"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/companion_chika.png" alt="Street Photography" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Moments</span>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Street Photography</p>
+            </div>
+          </div>
+
+          <!-- ==================== CATEGORY: EXPLORE ==================== -->
+          <!-- Card 9 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="explore" data-base-rotation="-5">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-emerald-600 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-emerald-800"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/travel_hills.png" alt="Lembang Nature Sunrise" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Explore</span>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Lembang Nature Trek</p>
+            </div>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="explore" data-base-rotation="6">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-purple-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-purple-700"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/companion_chika.png" alt="Explore with Chika" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Explore</span>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Hiking with Chika</p>
+            </div>
+          </div>
+
+          <!-- Card 11 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="explore" data-base-rotation="-4">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-red-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-red-700"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/companion_insan.png" alt="Explore with Insan" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Explore</span>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Outdoors with Insan</p>
+            </div>
+          </div>
+
+          <!-- Card 12 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="explore" data-base-rotation="4">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-orange-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-orange-700"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/companion_atikah.png" alt="Explore with Atikah" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Explore</span>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Sunrise Hunt</p>
+            </div>
+          </div>
+
+          <!-- ==================== CATEGORY: COMPANION ==================== -->
+          <!-- Card 13 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="companion" data-base-rotation="-4">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-yellow-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-yellow-700"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/companion_khusnul.png" alt="Companion Khusnul" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Companion</span>
+              <p class="font-display text-sm text-center text-ink dark:text-textdark italic leading-tight">Companion Khusnul</p>
+            </div>
+          </div>
+
+          <!-- Card 14 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="companion" data-base-rotation="6">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-mauve shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-mulberry"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/companion_bella.png" alt="Companion Bella" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Companion</span>
+              <p class="font-display text-sm text-center text-ink dark:text-textdark italic leading-tight">Companion Bella</p>
+            </div>
+          </div>
+
+          <!-- Card 15 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="companion" data-base-rotation="-5">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-sky-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-sky-700"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/companion_chika.png" alt="Companion Chika" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Companion</span>
+              <p class="font-display text-sm text-center text-ink dark:text-textdark italic leading-tight">Companion Chika</p>
+            </div>
+          </div>
+
+          <!-- Card 16 -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="companion" data-base-rotation="5">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-emerald-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-emerald-700"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/companion_hilma.png" alt="Companion Hilma" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Companion</span>
+              <p class="font-display text-sm text-center text-ink dark:text-textdark italic leading-tight">Companion Hilma</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CARA BOOKING LAYANAN & TRIP CONFIGURATOR SECTION -->
+  <section id="booking-section" class="py-24 md:py-32 bg-cream dark:bg-bgdark relative border-y border-purple-100/10 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 relative">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="text-xs uppercase font-bold tracking-wider text-mauve dark:text-blush font-sans">BOOKING GUIDE & TOOL</span>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-mulberry dark:text-mulberry-dark font-display leading-tight">Cara Booking Layanan</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-mauve to-blush mx-auto rounded-full"></div>
+        <p class="text-sm md:text-base text-ink/75 dark:text-textdark/75 leading-relaxed max-w-2xl mx-auto font-sans">
+          Ikuti tiga langkah sederhana untuk memesan layanan Travel Buddy Bandung sesuai kebutuhan aktivitasmu.
+        </p>
+      </div>
+
+      <!-- Left-Right Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left Column: Steps -->
+        <div class="lg:col-span-5 flex flex-col gap-8 justify-start h-auto py-1">
+          
+          <!-- Step 1 -->
+          <div class="relative bg-white dark:bg-surfacedark/40 rounded-[28px] border border-purple-100 dark:border-purple-950/40 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.01)] hover:shadow-soft hover:scale-[1.01] transition-all duration-300 group select-none min-h-[170px]">
+            <!-- Watermark -->
+            <div class="absolute top-6 right-8 font-display italic text-6xl font-black text-mauve dark:text-textdark opacity-10 group-hover:opacity-25 transition-opacity duration-500">01</div>
+            <!-- Inner content -->
+            <div class="space-y-2">
+              <span class="text-[10px] uppercase font-bold tracking-wider text-mauve dark:text-blush">Langkah Pertama</span>
+              <h3 class="font-display font-bold text-lg text-ink dark:text-textdark mt-1">Hubungi Kami via Chat</h3>
+              <p class="text-xs md:text-sm text-ink/70 dark:text-textdark/65 leading-relaxed">
+                Klik tombol paket atau kontak utama. Kirim nama, tanggal & jam, pilihan paket layanan, serta jumlah orang (1 atau maks 2 orang).
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative bg-white dark:bg-surfacedark/40 rounded-[28px] border border-purple-100 dark:border-purple-950/40 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.01)] hover:shadow-soft hover:scale-[1.01] transition-all duration-300 group select-none min-h-[170px]">
+            <div class="absolute top-6 right-8 font-display italic text-6xl font-black text-mauve dark:text-textdark opacity-10 group-hover:opacity-25 transition-opacity duration-500">02</div>
+            <div class="space-y-2">
+              <span class="text-[10px] uppercase font-bold tracking-wider text-mauve dark:text-blush">Diskusi Personal</span>
+              <h3 class="font-display font-bold text-lg text-ink dark:text-textdark mt-1">Diskusi Kebutuhan</h3>
+              <p class="text-xs md:text-sm text-ink/70 dark:text-textdark/65 leading-relaxed">
+                Sesuaikan durasi, itinerary, pilih local companion favoritmu, serta samakan ekspektasi dan batasan pribadi demi kenyamanan trip.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative bg-white dark:bg-surfacedark/40 rounded-[28px] border border-purple-100 dark:border-purple-950/40 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.01)] hover:shadow-soft hover:scale-[1.01] transition-all duration-300 group select-none min-h-[170px]">
+            <div class="absolute top-6 right-8 font-display italic text-6xl font-black text-mauve dark:text-textdark opacity-10 group-hover:opacity-25 transition-opacity duration-500">03</div>
+            <div class="space-y-2">
+              <span class="text-[10px] uppercase font-bold tracking-wider text-mauve dark:text-blush">Aman & Terkunci</span>
+              <h3 class="font-display font-bold text-lg text-ink dark:text-textdark mt-1">Konfirmasi & Pembayaran</h3>
+              <p class="text-xs md:text-sm text-ink/70 dark:text-textdark/65 leading-relaxed">
+                Booking jadwal akan dikunci setelah DP atau pembayaran penuh terkonfirmasi. Detail teknis pendampingan dikirim sebelum hari-H.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Configurator Card -->
+        <div class="lg:col-span-7">
+          <div class="bg-white dark:bg-surfacedark/30 rounded-[28px] border border-purple-100 dark:border-purple-950/40 p-5 shadow-[0_15px_50px_rgba(107,54,84,0.04)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] space-y-3.5">
+            
+            <!-- Header -->
+            <div class="flex items-center gap-3 pb-3 border-b border-purple-50 dark:border-purple-950/40">
+              <div class="w-10 h-10 rounded-xl bg-[#6B3654]/15 flex items-center justify-center">
+                <i data-lucide="calculator" class="w-5 h-5 text-[#6B3654] dark:text-[#DBA0BE]"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-xl text-ink dark:text-textdark">Trip Configurator</h3>
+                <p class="text-xs text-ink/65 dark:text-textdark/65">Sesuaikan trip kamu untuk simulasi harga & format WhatsApp instan.</p>
+              </div>
+            </div>
+
+            <!-- Form Fields -->
+            <div class="space-y-2.5">
+              
+              <!-- Nama Lengkap -->
+              <div class="space-y-1">
+                <label class="text-[10px] font-bold uppercase tracking-wider text-[#A85D82] dark:text-[#D9A0BE]">Nama Lengkap</label>
+                <div class="relative">
+                  <i data-lucide="user" class="absolute left-4 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-ink/40 dark:text-textdark/40"></i>
+                  <input type="text" id="config-name" placeholder="Masukkan nama panggilan / nama lengkap" class="w-full pl-11 pr-4 py-2 rounded-2xl bg-cream/30 dark:bg-bgdark/30 border border-purple-100 dark:border-purple-950/40 text-sm focus:outline-none focus:border-[#6B3654] transition-colors text-ink dark:text-textdark">
+                </div>
+              </div>
+
+              <!-- Grid: Kategori & Paket Tier -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div class="space-y-1">
+                  <label class="text-[10px] font-bold uppercase tracking-wider text-[#A85D82] dark:text-[#D9A0BE]">Pilih Kategori</label>
+                  <select id="config-category" class="w-full px-4 py-2 rounded-2xl bg-cream/30 dark:bg-bgdark/30 border border-purple-100 dark:border-purple-950/40 text-sm focus:outline-none focus:border-[#6B3654] transition-colors text-ink dark:text-textdark appearance-none">
+                    <option value="care">TBB CARE</option>
+                    <option value="moments">TBB MOMENTS</option>
+                    <option value="explore" selected>TBB EXPLORE</option>
+                    <option value="companion">TBB COMPANION</option>
+                  </select>
+                </div>
+                
+                <div class="space-y-1">
+                  <label class="text-[10px] font-bold uppercase tracking-wider text-[#A85D82] dark:text-[#D9A0BE]">Pilih Paket Tier</label>
+                  <select id="config-tier" class="w-full px-4 py-2 rounded-2xl bg-cream/30 dark:bg-bgdark/30 border border-purple-100 dark:border-purple-950/40 text-sm focus:outline-none focus:border-[#6B3654] transition-colors text-ink dark:text-textdark appearance-none">
+                    <!-- Options loaded dynamically in JS -->
+                  </select>
+                </div>
+              </div>
+
+              <!-- Grid: Companion & Jumlah Orang -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div class="space-y-1">
+                  <label class="text-[10px] font-bold uppercase tracking-wider text-[#A85D82] dark:text-[#D9A0BE]">Request Companion</label>
+                  <select id="config-companion" class="w-full px-4 py-2 rounded-2xl bg-cream/30 dark:bg-bgdark/30 border border-purple-100 dark:border-purple-950/40 text-sm focus:outline-none focus:border-[#6B3654] transition-colors text-ink dark:text-textdark appearance-none">
+                    <option value="Rekomendasi TBB">Rekomendasi Terbaik TBB</option>
+                    <option value="Khusnul">Khusnul</option>
+                    <option value="Hilma">Hilma</option>
+                    <option value="Adzqia">Adzqia</option>
+                    <option value="Atikah">Atikah</option>
+                    <option value="Insan">Insan</option>
+                    <option value="Bella">Bella</option>
+                    <option value="Chika">Chika</option>
+                  </select>
+                </div>
+
+                <div class="space-y-1">
+                  <label class="text-[10px] font-bold uppercase tracking-wider text-[#A85D82] dark:text-[#D9A0BE]">Jumlah Orang</label>
+                  <div class="grid grid-cols-2 gap-2">
+                    <button type="button" id="btn-1-person" class="py-2 rounded-2xl bg-[#6B3654] text-white font-bold text-xs md:text-sm shadow-sm transition-all flex items-center justify-center gap-1.5">
+                      <i data-lucide="user" class="w-4 h-4"></i>
+                      <span>1 Orang</span>
+                    </button>
+                    <button type="button" id="btn-2-people" class="py-2 rounded-2xl bg-cream/30 dark:bg-bgdark/30 text-mulberry dark:text-textdark border border-purple-100/50 dark:border-purple-950/40 font-bold text-xs md:text-sm transition-all flex items-center justify-center gap-1.5">
+                      <i data-lucide="users" class="w-4 h-4"></i>
+                      <span>2 Orang</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Grid: Tanggal & Jam -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div class="space-y-1">
+                  <label class="text-[10px] font-bold uppercase tracking-wider text-[#A85D82] dark:text-[#D9A0BE]">Tanggal Keberangkatan</label>
+                  <div class="relative">
+                    <i data-lucide="calendar" class="absolute left-4 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-ink/40 dark:text-textdark/40"></i>
+                    <input type="date" id="config-date" class="w-full pl-11 pr-4 py-2 rounded-2xl bg-cream/30 dark:bg-bgdark/30 border border-purple-100 dark:border-purple-950/40 text-sm focus:outline-none focus:border-[#6B3654] transition-colors text-ink dark:text-textdark">
+                  </div>
+                </div>
+
+                <div class="space-y-1">
+                  <label class="text-[10px] font-bold uppercase tracking-wider text-[#A85D82] dark:text-[#D9A0BE]">Jam Penjemputan</label>
+                  <div class="relative">
+                    <i data-lucide="clock" class="absolute left-4 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-ink/40 dark:text-textdark/40"></i>
+                    <input type="time" id="config-time" class="w-full pl-11 pr-4 py-2 rounded-2xl bg-cream/30 dark:bg-bgdark/30 border border-purple-100 dark:border-purple-950/40 text-sm focus:outline-none focus:border-[#6B3654] transition-colors text-ink dark:text-textdark">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Invoice / Estimated Bill Section (Classic invoice with dashed border) -->
+            <div class="bg-cream/20 dark:bg-bgdark/20 border border-dashed border-purple-200 dark:border-purple-950/80 rounded-2xl p-3.5 space-y-2">
+              <div class="flex items-center justify-between border-b border-dashed border-purple-100 dark:border-purple-950/40 pb-2">
+                <span class="font-display font-bold text-sm text-ink dark:text-textdark">Rangkuman Estimasi</span>
+                <span class="text-[9px] uppercase tracking-wider font-bold text-mauve dark:text-blush">DRAFT INVOICE</span>
+              </div>
+              
+              <div class="space-y-1.5 font-mono text-[11px] md:text-xs text-ink/75 dark:text-textdark/70">
+                <div class="flex justify-between gap-4">
+                  <span>Layanan Paket</span>
+                  <span id="invoice-package" class="text-right font-semibold">TBB EXPLORE - Explore Day (Tier 2)</span>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <span>Durasi</span>
+                  <span id="invoice-duration" class="text-right font-semibold">5 Jam</span>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <span>Travel Companion</span>
+                  <span id="invoice-companion" class="text-right font-semibold">Rekomendasi TBB</span>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <span>Jumlah Traveler</span>
+                  <span id="invoice-travelers" class="text-right font-semibold">1 Orang</span>
+                </div>
+              </div>
+
+              <div class="flex items-end justify-between border-t border-dashed border-purple-100 dark:border-purple-950/40 pt-3">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-[#A85D82] dark:text-[#D9A0BE] pb-1">ESTIMASI TARIF</span>
+                <span id="invoice-total" class="font-display font-extrabold text-2xl md:text-3xl text-mulberry dark:text-mulberry-dark">Rp259.000</span>
+              </div>
+            </div>
+
+            <!-- Bottom Actions -->
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 pt-0">
+              <button type="button" id="btn-config-whatsapp" class="sm:col-span-8 py-2.5 rounded-2xl bg-[#6B3654] text-white font-bold text-sm hover:bg-mulberry transition-colors shadow-md shadow-mauve/15 flex items-center justify-center gap-2 group">
+                <i data-lucide="message-square" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                <span>KIRIM BOOKING VIA WHATSAPP</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+              </button>
+              <button type="button" id="btn-config-copy" class="sm:col-span-4 py-2.5 rounded-2xl border border-purple-100 dark:border-purple-950/40 text-mulberry dark:text-textdark font-bold text-sm bg-white dark:bg-surfacedark/20 hover:bg-[#6B3654]/10 dark:hover:bg-[#6B3654]/20 transition-all flex items-center justify-center gap-2">
+                <i data-lucide="copy" class="w-4.5 h-4.5"></i>
+                <span>SALIN PESAN</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. YOUR COMPANION SECTION (Profiles) -->
+  <section id="companion" class="py-12 md:py-16 bg-white/40 dark:bg-surfacedark/20 border-y border-purple-100/10">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="text-center max-w-3xl mx-auto mb-10 space-y-4">
+        <span class="text-sm uppercase font-bold tracking-wider text-mauve dark:text-mauve-dark">Local Companions</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-mulberry dark:text-mulberry-dark">Kenali Tim Companion</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-mauve to-blush mx-auto rounded-full"></div>
+        <p class="text-base md:text-lg text-ink/70 dark:text-textdark/70">
+          Para travel buddy ramah yang siap menemani perjalananmu di Bandung dengan aman dan berkesan.
+        </p>
+      </div>
+
+      <!-- Slideable Carousel Container -->
+      <div class="carousel-container relative">
+        
+        <!-- Track of cards -->
+        <div class="carousel-track" id="companion-track">
+          
+          <!-- Card 1: Khusnul -->
+          <div class="carousel-item">
+            <div class="companion-card flex flex-col bg-white dark:bg-surfacedark rounded-3xl border border-purple-100 dark:border-purple-950/40 overflow-hidden transition-theme hover:shadow-xl tilt-card">
+              <div class="h-72 overflow-hidden relative">
+                <img src="assets/images/companion_khusnul.png" alt="Khusnul" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6 space-y-3">
+                <h3 class="font-bold text-xl text-ink dark:text-textdark">Khusnul</h3>
+                <p class="text-xs text-mauve dark:text-mauve-dark font-semibold">@khusnul.hilal</p>
+                <p class="text-sm text-ink/85 dark:text-textdark/85 leading-relaxed">
+                  Friendly, supel, dan berpengalaman luas memandu perjalanan santai keliling sudut-sudut estetis Bandung.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Hilma -->
+          <div class="carousel-item">
+            <div class="companion-card flex flex-col bg-white dark:bg-surfacedark rounded-3xl border border-purple-100 dark:border-purple-950/40 overflow-hidden transition-theme hover:shadow-xl tilt-card">
+              <div class="h-72 overflow-hidden relative">
+                <img src="assets/images/companion_hilma.png" alt="Hilma" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6 space-y-3">
+                <h3 class="font-bold text-xl text-ink dark:text-textdark">Hilma</h3>
+                <p class="text-xs text-mauve dark:text-mauve-dark font-semibold">@hilma.hlmh</p>
+                <p class="text-sm text-ink/85 dark:text-textdark/85 leading-relaxed">
+                  Peduli, ramah, komunikatif. Sangat andal menemani urusan administrasi, medis, maupun kulineran Bandung.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Adzqia -->
+          <div class="carousel-item">
+            <div class="companion-card flex flex-col bg-white dark:bg-surfacedark rounded-3xl border border-purple-100 dark:border-purple-950/40 overflow-hidden transition-theme hover:shadow-xl tilt-card">
+              <div class="h-72 overflow-hidden relative">
+                <img src="assets/images/companion_adzqia.png" alt="Adzqia" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6 space-y-3">
+                <h3 class="font-bold text-xl text-ink dark:text-textdark">Adzqia</h3>
+                <p class="text-xs text-mauve dark:text-mauve-dark font-semibold">@adzqia</p>
+                <p class="text-sm text-ink/85 dark:text-textdark/85 leading-relaxed">
+                  Guide yang ceria, easy going, dan tahu semua spot foto aesthetic terbaik yang tersembunyi di Bandung.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Atikah -->
+          <div class="carousel-item">
+            <div class="companion-card flex flex-col bg-white dark:bg-surfacedark rounded-3xl border border-purple-100 dark:border-purple-950/40 overflow-hidden transition-theme hover:shadow-xl tilt-card">
+              <div class="h-72 overflow-hidden relative">
+                <img src="assets/images/companion_atikah.png" alt="Atikah" class="w-full h-full object-cover">
+                <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-sage text-white text-xs font-bold uppercase tracking-wider">Monday Only</div>
+              </div>
+              <div class="p-6 space-y-3">
+                <h3 class="font-bold text-xl text-ink dark:text-textdark">Atikah</h3>
+                <p class="text-xs text-mauve dark:text-mauve-dark font-semibold">@atikah</p>
+                <p class="text-sm text-ink/85 dark:text-textdark/85 leading-relaxed">
+                  Sabar, kalem, dan pendengar yang baik. Sangat cocok menemani aktivitas santai di awal pekan Anda.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Bella -->
+          <div class="carousel-item">
+            <div class="companion-card flex flex-col bg-white dark:bg-surfacedark rounded-3xl border border-purple-100 dark:border-purple-950/40 overflow-hidden transition-theme hover:shadow-xl tilt-card">
+              <div class="h-72 overflow-hidden relative">
+                <img src="assets/images/companion_bella.png" alt="Bella" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6 space-y-3">
+                <h3 class="font-bold text-xl text-ink dark:text-textdark">Bella</h3>
+                <p class="text-xs text-mauve dark:text-mauve-dark font-semibold">@bella.travel</p>
+                <p class="text-sm text-ink/85 dark:text-textdark/85 leading-relaxed">
+                  Penyuka sejarah dan arsitektur kuno. Siap mendampingi Anda berburu foto klasik di Braga dan sekitarnya.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Chika -->
+          <div class="carousel-item">
+            <div class="companion-card flex flex-col bg-white dark:bg-surfacedark rounded-3xl border border-purple-100 dark:border-purple-950/40 overflow-hidden transition-theme hover:shadow-xl tilt-card">
+              <div class="h-72 overflow-hidden relative">
+                <img src="assets/images/companion_chika.png" alt="Chika" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6 space-y-3">
+                <h3 class="font-bold text-xl text-ink dark:text-textdark">Chika</h3>
+                <p class="text-xs text-mauve dark:text-mauve-dark font-semibold">@chika.buddy</p>
+                <p class="text-sm text-ink/85 dark:text-textdark/85 leading-relaxed">
+                  Aktif, menyukai petualangan alam, dan siap menemani trekking seru menyusuri perbukitan hijau Bandung.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Slider Navigation Controls -->
+        <button id="carousel-prev" class="absolute left-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 dark:bg-surfacedark/80 text-mulberry dark:text-textdark flex items-center justify-center shadow-lg hover:bg-mauve hover:text-white transition-all z-10" aria-label="Previous Companion">
+          <i data-lucide="chevron-left" class="w-6 h-6"></i>
+        </button>
+        <button id="carousel-next" class="absolute right-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/80 dark:bg-surfacedark/80 text-mulberry dark:text-textdark flex items-center justify-center shadow-lg hover:bg-mauve hover:text-white transition-all z-10" aria-label="Next Companion">
+          <i data-lucide="chevron-right" class="w-6 h-6"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. TESTIMONIALS SECTION (Infinite Marquee with Screenshot Cards) -->
+  <section id="testimonials" class="pt-10 pb-16 md:pt-14 md:pb-20 bg-cream dark:bg-bgdark relative overflow-hidden border-t border-purple-100/10">
+    
+    <div class="text-center max-w-3xl mx-auto mb-6 px-6">
+      <span class="text-xs uppercase font-bold tracking-wider text-mauve dark:text-mauve-dark px-3 py-1 rounded-full bg-mauve/10 border border-mauve/20">Our Testimonials</span>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-mulberry dark:text-mulberry-dark font-display leading-tight flex flex-col justify-center items-center gap-y-1.5 mt-3 select-none">
+        <span class="flex items-center gap-x-2">
+          Real Talk <span class="text-mauve dark:text-mauve-dark inline-block align-middle"><i data-lucide="message-square" class="w-6 h-6 md:w-8 md:h-8"></i></span> from
+        </span>
+        <span class="flex items-center gap-x-2">
+          Real Customers <span class="text-mauve dark:text-mauve-dark inline-block align-middle"><i data-lucide="users" class="w-6 h-6 md:w-8 md:h-8"></i></span>
+        </span>
+      </h2>
+    </div>
+
+    <!-- Infinite Marquee Area with Blur Edges -->
+    <div class="relative w-full overflow-hidden py-2">
+      
+      <!-- Blurry Side Overlays -->
+      <div class="absolute left-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-r from-cream via-cream/20 to-transparent pointer-events-none z-10 dark:from-bgdark dark:via-bgdark/20"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-l from-cream via-cream/20 to-transparent pointer-events-none z-10 dark:from-bgdark dark:via-bgdark/20"></div>
+
+      <!-- Row 1: Leftward infinite scroll -->
+      <div id="marquee-row-1" class="marquee-row-container flex mb-5 cursor-grab active:cursor-grabbing select-none">
+        <div class="marquee-track flex gap-6">
+          
+          <!-- Card 1 -->
+          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
+              <img src="assets/images/review_whatsapp_1.png" alt="Review Siska" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-3 px-1">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">SA</div>
+              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Siska Amanda</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
+              <img src="assets/images/review_whatsapp_2.png" alt="Review Ratih" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-3 px-1">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">RP</div>
+              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Ratih P.</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
+              <img src="assets/images/review_whatsapp_3.png" alt="Review Devi" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-3 px-1">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">DS</div>
+              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Devi Shanti</span>
+            </div>
+          </div>
+
+          <!-- Duplicate Cards for Loop -->
+          <!-- Card 1 -->
+          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
+              <img src="assets/images/review_whatsapp_1.png" alt="Review Siska" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-3 px-1">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">SA</div>
+              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Siska Amanda</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
+              <img src="assets/images/review_whatsapp_2.png" alt="Review Ratih" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-3 px-1">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">RP</div>
+              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Ratih P.</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
+              <img src="assets/images/review_whatsapp_3.png" alt="Review Devi" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-3 px-1">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">DS</div>
+              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Devi Shanti</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Row 2: Rightward infinite scroll -->
+      <div id="marquee-row-2" class="marquee-row-container flex cursor-grab active:cursor-grabbing select-none">
+        <div class="marquee-track flex gap-6">
+          
+          <!-- Card 4 -->
+          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
+              <img src="assets/images/review_whatsapp_4.png" alt="Review Annisa" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-3 px-1">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">AL</div>
+              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Annisa Lubis</span>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
+              <img src="assets/images/review_whatsapp_5.png" alt="Review Viona" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-3 px-1">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">VT</div>
+              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Viona Tan</span>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
+              <img src="assets/images/review_whatsapp_6.png" alt="Review Sara" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-3 px-1">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">SF</div>
+              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Sara Farah</span>
+            </div>
+          </div>
+
+          <!-- Duplicate Cards for Loop -->
+          <!-- Card 4 -->
+          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
+              <img src="assets/images/review_whatsapp_4.png" alt="Review Annisa" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-3 px-1">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">AL</div>
+              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Annisa Lubis</span>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
+              <img src="assets/images/review_whatsapp_5.png" alt="Review Viona" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-3 px-1">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">VT</div>
+              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Viona Tan</span>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
+              <img src="assets/images/review_whatsapp_6.png" alt="Review Sara" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-3 px-1">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">SF</div>
+              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Sara Farah</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 9. OPEN COLLABORATION SECTION -->
+  <section id="kolaborasi" class="py-12 md:py-16 bg-white dark:bg-bgdark transition-theme">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Large Card Container -->
+      <div class="bg-[#F7F2ED] dark:bg-surfacedark/35 rounded-[32px] md:rounded-[40px] p-8 md:p-16 border border-purple-100/10 shadow-[0_20px_50px_rgba(107,54,84,0.02)]">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left text block -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Badge Kecil -->
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-mauve/20 bg-white/80 dark:bg-surfacedark/80 text-[10px] font-bold uppercase tracking-wider text-mauve dark:text-blush">
+              <i data-lucide="handshake" class="w-3.5 h-3.5 text-mauve"></i>
+              JOIN FORCES ✨
+            </span>
+            <!-- Judul Utama -->
+            <h2 class="font-display text-3xl md:text-5xl font-extrabold text-ink dark:text-textdark leading-tight select-none">
+              Open Collaboration <br>
+              <span class="text-mauve dark:text-blush">Mari Berkarya Bersama TBB</span>
+            </h2>
+            <!-- Paragraf Deskripsi -->
+            <p class="text-sm md:text-base text-ink/75 dark:text-textdark/75 leading-relaxed font-sans font-light">
+              Kami membuka kesempatan kolaborasi kolaboratif bersama brand lokal, content creator, penginapan aesthetic, café hits, atau partner travel lainnya di Bandung. Punya ide petualangan seru? Kirim proposal atau langsung hubungi kami!
+            </p>
+            <!-- Tombol CTA -->
+            <div class="pt-2">
+              <a href="#" class="wa-main-link inline-flex items-center gap-2 px-7 py-4 rounded-full bg-mulberry dark:bg-mauve text-white text-xs md:text-sm font-bold uppercase tracking-widest hover:bg-mulberry/90 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                <span>HUBUNGI KAMI UNTUK KOLABORASI</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right showcase block (Emina cosmetics card) -->
+          <div class="lg:col-span-5 flex justify-center w-full">
+            <!-- Glassmorphic Card -->
+            <div class="w-full max-w-sm bg-white/70 dark:bg-surfacedark/60 backdrop-blur-md p-8 rounded-[28px] border border-dashed border-mauve/40 shadow-[0_15px_35px_rgba(168,93,130,0.06)] flex flex-col items-center text-center gap-6 relative hover:scale-[1.01] transition-transform duration-300">
+              
+              <!-- Sub-judul Kecil -->
+              <span class="text-[9px] uppercase font-bold text-mauve dark:text-blush tracking-widest">OFFICIAL LAUNCH PARTNER</span>
+              
+              <!-- Logo Partner -->
+              <div class="flex flex-col items-center">
+                <div class="flex items-center gap-1 select-none">
+                  <span class="font-sans font-black text-3xl tracking-tight text-[#E84E89]">emina</span>
+                  <i data-lucide="heart" class="w-4 h-4 fill-[#E84E89] text-[#E84E89]"></i>
+                </div>
+                <span class="text-[9px] uppercase font-bold text-ink/40 dark:text-textdark/40 tracking-[0.25em] mt-1">COSMETICS</span>
+              </div>
+              
+              <!-- Slogan Italic -->
+              <p class="font-display italic text-lg text-ink/80 dark:text-textdark/80">“Beauty in Simplicity”</p>
+              
+              <!-- Deskripsi Partner -->
+              <p class="text-xs text-ink/65 dark:text-textdark/65 leading-relaxed font-sans">
+                Mendukung kepercayaan diri para traveler perempuan untuk bersinar di setiap petualangan serunya.
+              </p>
+              
+              <!-- Pembatas Bawah -->
+              <div class="w-full border-t border-dashed border-purple-100 dark:border-purple-950/20 pt-4 flex items-center justify-center gap-1 text-[9px] uppercase font-bold text-mauve dark:text-blush tracking-wider">
+                <span>💖 TBB × EMINA PARTNERSHIP</span>
+              </div>
+              
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- 10. CLOSING / FOOTER CTA -->
+  <section class="py-16 md:py-24 bg-cream dark:bg-bgdark relative overflow-hidden transition-theme">
+    <div class="max-w-4xl mx-auto px-6">
+      
+      <!-- Center-focused Content Box -->
+      <div class="bg-white/95 dark:bg-surfacedark/70 rounded-[40px] p-8 md:p-14 border border-purple-100/10 shadow-[0_25px_60px_rgba(107,54,84,0.04)] text-center space-y-6 relative z-10">
+        
+        <!-- Indikator Atas -->
+        <span class="block text-[10px] font-bold uppercase tracking-[0.2em] text-mauve dark:text-blush">
+          ● YOUR BANDUNG BUDDY AWAITS
+        </span>
+        
+        <!-- Judul Utama -->
+        <h2 class="font-display text-3xl md:text-5xl font-extrabold text-ink dark:text-textdark leading-tight select-none">
+          Ready Jalan-Jalan <br>
+          Bareng <span class="text-mauve dark:text-blush">TBB?</span>
+        </h2>
+        
+        <!-- Paragraf Subtext -->
+        <p class="text-sm md:text-base text-ink/75 dark:text-textdark/75 max-w-xl mx-auto font-sans leading-relaxed">
+          Hubungi kami sekarang untuk memesan jadwal companion trip kamu. Amankan jadwalmu minimal H-1 sebelum keberangkatan!
+        </p>
+
+        <!-- Tombol CTA Utama -->
+        <div class="pt-2">
+          <a href="#" class="wa-main-link inline-flex items-center gap-2 px-8 py-4 rounded-full bg-mulberry dark:bg-mauve text-white text-xs md:text-sm font-bold uppercase tracking-wider hover:bg-mulberry/90 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+            <i data-lucide="message-circle" class="w-4.5 h-4.5"></i>
+            <span>AMANKAN JADWAL COMPANION</span>
+          </a>
+        </div>
+        
+        <!-- Catatan Kaki/Disclaimer -->
+        <div class="pt-4 flex items-center justify-center gap-1.5 text-[9px] font-bold uppercase tracking-widest text-mauve dark:text-blush">
+          <span>⭐ SLOT HARIAN TERBATAS DEMI MENJAGA KUALITAS LAYANAN TERBAIK</span>
+        </div>
+        
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 11. FOOTER -->
+  <footer class="bg-mulberry dark:bg-[#150a10] text-purple-100/90 py-12 border-t border-purple-900/10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      
+      <!-- Branding Column -->
+      <div class="md:col-span-4 space-y-4">
+        <div class="flex items-center gap-2 select-none">
+          <svg class="w-7 h-7" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 70C20 40 40 20 55 20C70 20 80 35 80 50C80 65 65 80 45 80C25 80 15 65 15 50C15 30 35 15 60 15" stroke="#F5E9EF" stroke-width="12" stroke-linecap="round" fill="none"/>
+          </svg>
+          <span class="font-display text-xl font-bold tracking-tight text-white">TBB</span>
+        </div>
+        <p class="text-xs text-purple-200/70 max-w-sm">
+          Jasa Local Companion khusus untuk perempuan traveler di Bandung. Menghadirkan rasa aman, nyaman, dan privasi penuh di setiap sudut petualangan.
+        </p>
+      </div>
+
+      <!-- Links Column -->
+      <div class="md:col-span-4 space-y-4">
+        <h4 class="font-bold text-sm uppercase tracking-wider text-white">Hubungi Kami</h4>
+        <ul class="space-y-2 text-xs md:text-sm text-purple-200/80">
+          <li class="flex items-center gap-2">
+            <i data-lucide="mail" class="w-4 h-4 text-blush"></i>
+            <span>temanprofessional@gmail.com</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-blush"></i>
+            <span>085793340006</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-blush"></i>
+            <span>TBB | Jasa Temani Bandung</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social handles Column -->
+      <div class="md:col-span-4 space-y-4 md:text-right">
+        <h4 class="font-bold text-sm uppercase tracking-wider text-white md:block">Ikuti Kami</h4>
+        <div class="flex md:justify-end gap-4">
+          <a href="https://instagram.com/jasatemani.bandung" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full bg-purple-900/40 text-purple-100 hover:bg-blush hover:text-mulberry transition-all" aria-label="Instagram">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </a>
+          <a href="https://tiktok.com/@jasatemani.bandung" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full bg-purple-900/40 text-purple-100 hover:bg-blush hover:text-mulberry transition-all" aria-label="TikTok">
+            <i data-lucide="video" class="w-5 h-5"></i>
+          </a>
+        </div>
+        <p class="text-[10px] text-purple-200/50">
+          &copy; 2026 TBB — Jasa Temani Bandung. All Rights Reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Script initialization -->
+  <script src="assets/js/script.js"></script>
+  <script>
+    // Initialize lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
