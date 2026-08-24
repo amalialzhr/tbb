@@ -173,6 +173,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initSafe("initTestimonialMarquees", initTestimonialMarquees);
   initSafe("initFallingPillsAnimation", initFallingPillsAnimation);
   initSafe("setupWorryCardHoverFeedback", setupWorryCardHoverFeedback);
+  initSafe("initEminaCarousel", initEminaCarousel);
+  initSafe("initCustomCursor", initCustomCursor);
+  initSafe("initScrollProgressBar", initScrollProgressBar);
   
   // Resize event handler to keep route paths perfectly aligned with grid positions
   window.addEventListener("resize", () => {
@@ -401,6 +404,15 @@ function bindWaButtons() {
   const baseWaUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Halo TBB, aku ingin bertanya mengenai layanan Travel Buddy Bandung.")}`;
   baseWaLinks.forEach(link => {
     link.setAttribute("href", baseWaUrl);
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noopener noreferrer");
+  });
+
+  // Collaboration WA Contact links
+  const collabWaLinks = document.querySelectorAll(".wa-collab-link");
+  const collabWaUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Hi TBB Team! Aku dari [Nama Brand/Creator], mau ajak collab bareng TBB nih. Boleh diskusi lebih lanjut?")}`;
+  collabWaLinks.forEach(link => {
+    link.setAttribute("href", collabWaUrl);
     link.setAttribute("target", "_blank");
     link.setAttribute("rel", "noopener noreferrer");
   });
@@ -966,16 +978,15 @@ function initTripConfigurator() {
     if (!selectedPkg) return;
 
     // Calculation logic:
-    // If traveler is 2, add Rp50.000 surcharge.
+    // Tarif dihitung per orang (dikali sebanyak jumlah traveler/companion)
     const basePrice = selectedPkg.price;
-    const surcharge = numPeople === 2 ? 50000 : 0;
-    const totalPrice = basePrice + surcharge;
+    const totalPrice = basePrice * numPeople;
 
     // Update text
     invoicePackage.textContent = `${selectedCategory.toUpperCase()} - ${selectedPkg.name}`;
     invoiceDuration.textContent = selectedPkg.duration;
     invoiceCompanion.textContent = companionSelect.value;
-    invoiceTravelers.textContent = `${numPeople} Orang`;
+    invoiceTravelers.textContent = `${numPeople} Orang ${numPeople > 1 ? '(2x Tarif)' : ''}`;
     
     // Format money
     invoiceTotal.textContent = "Rp" + totalPrice.toLocaleString("id-ID");
@@ -1443,6 +1454,161 @@ function initFallingPillsAnimation() {
     }
   });
 }
+
+// 15. Interactive Emina Collab Carousel Slider
+function initEminaCarousel() {
+  const track = document.getElementById("emina-carousel-track");
+  const prevBtn = document.getElementById("emina-prev");
+  const nextBtn = document.getElementById("emina-next");
+  const dots = document.querySelectorAll(".emina-dot");
+  if (!track) return;
+
+  let currentIndex = 0;
+  const totalSlides = track.children.length;
+  if (totalSlides === 0) return;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    dots.forEach((dot, index) => {
+      if (index === currentIndex) {
+        dot.classList.add("bg-mauve", "w-6");
+        dot.classList.remove("bg-mauve/30", "w-2");
+      } else {
+        dot.classList.remove("bg-mauve", "w-6");
+        dot.classList.add("bg-mauve/30", "w-2");
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    });
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentIndex = index;
+      updateCarousel();
+    });
+  });
+
+  // Auto slide every 4 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  }, 4000);
+}
+
+
+// 16. Luxury Floating Custom Cursor & Sparkle Particles
+function initCustomCursor() {
+  const dot = document.getElementById("cursor-dot");
+  const ring = document.getElementById("cursor-ring");
+  if (!dot || !ring) return;
+
+  // Don't activate on touch devices
+  if (window.matchMedia("(pointer: coarse)").matches) return;
+
+  document.body.classList.add("custom-cursor-active");
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let ringX = mouseX;
+  let ringY = mouseY;
+  let isVisible = false;
+
+  window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    if (!isVisible) {
+      dot.style.opacity = "1";
+      ring.style.opacity = "1";
+      isVisible = true;
+    }
+
+    // Instant position for inner dot
+    dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+
+    // Sparkle trail creation on move over interactive zones
+    if (Math.random() < 0.08) {
+      createSparkle(mouseX, mouseY);
+    }
+  });
+
+  // Smooth lerp follow for outer ring
+  function animateRing() {
+    ringX += (mouseX - ringX) * 0.18;
+    ringY += (mouseY - ringY) * 0.18;
+    ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+    requestAnimationFrame(animateRing);
+  }
+  requestAnimationFrame(animateRing);
+
+  // Expand cursor when hovering over interactive elements
+  const hoverSelectors = "a, button, input, select, textarea, [role='button'], .companion-card, .polaroid-card, .gallery-polaroid-item, .worry-card";
+  document.addEventListener("mouseover", (e) => {
+    if (e.target.closest(hoverSelectors)) {
+      dot.classList.add("cursor-hover");
+      ring.classList.add("cursor-hover");
+    }
+  });
+
+  document.addEventListener("mouseout", (e) => {
+    if (e.target.closest(hoverSelectors)) {
+      dot.classList.remove("cursor-hover");
+      ring.classList.remove("cursor-hover");
+    }
+  });
+
+  document.addEventListener("mouseleave", () => {
+    dot.style.opacity = "0";
+    ring.style.opacity = "0";
+    isVisible = false;
+  });
+
+  function createSparkle(x, y) {
+    const sparkle = document.createElement("div");
+    sparkle.className = "sparkle-particle";
+    const size = Math.random() * 5 + 3;
+    sparkle.style.width = `${size}px`;
+    sparkle.style.height = `${size}px`;
+    sparkle.style.left = `${x + (Math.random() * 20 - 10)}px`;
+    sparkle.style.top = `${y + (Math.random() * 20 - 10)}px`;
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => {
+      sparkle.remove();
+    }, 700);
+  }
+}
+
+// 17. Scroll Progress Bar
+function initScrollProgressBar() {
+  const progressBar = document.getElementById("scroll-progress-bar");
+  if (!progressBar) return;
+
+  function updateProgress() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+  }
+
+  window.addEventListener("scroll", updateProgress, { passive: true });
+  updateProgress();
+}
+
+
 
 
 

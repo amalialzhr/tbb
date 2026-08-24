@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="TBB — Jasa Temani Bandung">
   <meta property="og:description" content="Local Companion khusus perempuan traveler di Bandung. Teman perjalanan yang aman, respectful, dan berkesan.">
-  <meta property="og:image" content="assets/images/companion_khusnul.png">
+  <meta property="og:image" content="assets/images/Foto companion/Khusnul.jpg">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
@@ -79,28 +79,23 @@
   <!-- Lenis Smooth Scroll CDN -->
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 </head>
-<body class="transition-theme bg-cream text-ink dark:bg-bgdark dark:text-textdark selection:bg-blush selection:text-mulberry">
+<body class="transition-theme bg-cream text-ink dark:bg-bgdark dark:text-textdark selection:bg-blush selection:text-mulberry relative">
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress-bar" class="fixed top-0 left-0 h-[3.5px] bg-gradient-to-r from-mauve via-blush to-mulberry z-[100] transition-all duration-150 ease-out shadow-[0_0_12px_rgba(168,93,130,0.8)]" style="width: 0%;"></div>
+
+  <!-- Luxury Custom Glowing Cursor Elements (Desktop Only) -->
+  <div id="cursor-dot" class="fixed top-0 left-0 w-2.5 h-2.5 bg-mauve rounded-full pointer-events-none z-[9999] opacity-0 transition-opacity duration-300 shadow-[0_0_10px_#A85D82]"></div>
+  <div id="cursor-ring" class="fixed top-0 left-0 w-9 h-9 border border-mauve/40 rounded-full pointer-events-none z-[9998] opacity-0 transition-opacity duration-300 backdrop-blur-[1px] shadow-[0_0_15px_rgba(168,93,130,0.2)]"></div>
 
 
   <header id="navbar" class="fixed top-0 left-0 right-0 z-50 w-full transition-theme border-b border-transparent bg-transparent">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-2 select-none">
-        <!-- SVG Ribbon Logo TBB -->
-        <svg class="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#A85D82" />
-              <stop offset="50%" stop-color="#D9A0BE" />
-              <stop offset="100%" stop-color="#6B3654" />
-            </linearGradient>
-          </defs>
-          <!-- Stylized ribbon forming TBB -->
-          <path d="M20 70C20 40 40 20 55 20C70 20 80 35 80 50C80 65 65 80 45 80C25 80 15 65 15 50C15 30 35 15 60 15" stroke="url(#logo-grad)" stroke-width="12" stroke-linecap="round" fill="none"/>
-          <path d="M50 40C50 40 55 50 60 60" stroke="#6B3654" stroke-width="8" stroke-linecap="round" class="dark:stroke-blush-dark"/>
-        </svg>
-        <span class="font-display text-2xl font-bold tracking-tight text-mulberry dark:text-mulberry-dark">TBB</span>
+      <a href="#" class="flex items-center gap-2 select-none group">
+        <img src="assets/images/Logo/logolightmode.png" alt="TBB - Travel Buddy Bandung" class="h-10 md:h-11 w-auto object-contain transition-transform group-hover:scale-105 dark:hidden">
+        <img src="assets/images/Logo/logodarkmode.png" alt="TBB - Travel Buddy Bandung" class="h-10 md:h-11 w-auto object-contain transition-transform group-hover:scale-105 hidden dark:block">
       </a>
 
       <!-- Desktop Navigation Menu -->
@@ -155,7 +150,7 @@
     <div class="relative w-full max-w-[97vw] lg:max-w-[98vw] mx-auto rounded-[32px] overflow-visible shadow-soft min-h-[82vh] lg:min-h-[86vh] flex items-center justify-center py-10 md:py-16 z-10">
       
       <!-- Inner Background Container (Clipped to rounded shape) -->
-      <div class="absolute inset-0 rounded-[32px] overflow-hidden bg-cover bg-center z-0" style="background-image: url('assets/images/hero_background.png');">
+      <div class="absolute inset-0 rounded-[32px] overflow-hidden bg-cover bg-center z-0" style="background-image: url('assets/images/Foto sampul untuk tampilan depan/IMG_1660.jpg');">
         <!-- Dark gradient overlay for readability -->
         <div class="absolute inset-0 bg-gradient-to-b from-[#1F1119]/45 via-[#1F1119]/60 to-[#1F1119]/95"></div>
       </div>
@@ -178,30 +173,30 @@
           </h1>
           
           <p class="text-base md:text-lg text-purple-100/80 max-w-xl leading-relaxed">
-            Kami menyediakan layanan jasa guide Bandung khusus perempuan, demi kenyamanan dan rasa aman para traveler selama menjelajahi sudut Kota Kembang.
+            Kami menyediakan layanan Jasa Temani Bandung khusus perempuan, demi kenyamanan dan rasa aman bagi para traveler selama menjelajahi sudut kota kembang
           </p>
 
           <!-- Stacked Companion Avatars -->
           <div class="flex flex-wrap items-center gap-4 pt-2">
             <div class="flex -space-x-3 overflow-hidden">
-              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-[#1F1119] object-cover" src="assets/images/companion_khusnul.png" alt="Khusnul">
-              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-[#1F1119] object-cover" src="assets/images/companion_hilma.png" alt="Hilma">
-              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-[#1F1119] object-cover" src="assets/images/companion_adzqia.png" alt="Adzqia">
-              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-[#1F1119] object-cover" src="assets/images/companion_atikah.png" alt="Atikah">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-[#1F1119] object-cover" src="assets/images/Foto companion/khusnul.jpg" alt="Khusnul">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-[#1F1119] object-cover" src="assets/images/Foto companion/hilma.jpg" alt="Hilma">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-[#1F1119] object-cover" src="assets/images/Foto companion/adzqia.jpg" alt="Adzqia">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-[#1F1119] object-cover" src="assets/images/Foto companion/nadwah.jpg" alt="Nadwah">
               <div class="inline-flex items-center justify-center h-10 w-10 rounded-full ring-2 ring-[#1F1119] bg-mauve text-white text-xs font-bold font-sans">+2</div>
             </div>
             <div class="text-sm font-medium text-white/90">
-              <span class="text-blush font-bold font-display text-lg">500+</span> Traveler sudah kami temani
+              <span class="text-blush font-bold font-display text-lg">100+</span> Traveler sudah kami temani
             </div>
           </div>
 
           <!-- CTA Action Group -->
           <div class="flex flex-col sm:flex-row gap-4 pt-4">
-            <a href="#services" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-3xl bg-mauve text-white font-semibold text-base hover:bg-white hover:text-mulberry hover:scale-[1.03] active:scale-[0.98] transition-all shadow-lg shadow-mauve/20">
+            <a href="#services" class="btn-shine inline-flex items-center justify-center gap-2 px-8 py-4 rounded-3xl bg-mauve text-white font-semibold text-base hover:bg-white hover:text-mulberry hover:scale-[1.03] active:scale-[0.98] transition-all shadow-lg shadow-mauve/20">
               <span>Lihat Paket Layanan</span>
               <i data-lucide="arrow-right" class="w-5 h-5"></i>
             </a>
-            <a href="#" class="wa-main-link inline-flex items-center justify-center gap-2 px-8 py-4 rounded-3xl bg-white/10 text-white border border-white/20 font-semibold text-base hover:bg-white/20 hover:scale-[1.03] active:scale-[0.98] transition-all">
+            <a href="#" class="wa-main-link btn-shine inline-flex items-center justify-center gap-2 px-8 py-4 rounded-3xl bg-white/10 text-white border border-white/20 font-semibold text-base hover:bg-white/20 hover:scale-[1.03] active:scale-[0.98] transition-all">
               <i data-lucide="message-square" class="w-5 h-5 text-blush"></i>
               <span>Chat via WhatsApp</span>
             </a>
@@ -215,22 +210,22 @@
           <!-- Polaroid Stack -->
           <div class="polaroid-stack tilt-card" id="hero-tilt-card">
             
-            <!-- Card 1: Lembang Nature Trek -->
+            <!-- Card 1: Wisata Alam Bandung -->
             <div class="polaroid-card polaroid-1">
-              <img src="assets/images/travel_hills.png" alt="Sunrise Tebing Keraton">
-              <div class="polaroid-label">Lembang Nature Trek</div>
+              <img src="assets/images/Every picture holds story/TBB EXPLORE/Wisata alam/IMG_0093.jpg" alt="Wisata Alam Bandung">
+              <div class="polaroid-label">Wisata Alam Bandung</div>
             </div>
             
-            <!-- Card 2: Your Companion (Chika) -->
+            <!-- Card 2: Momen Spesial TBB -->
             <div class="polaroid-card polaroid-2">
-              <img src="assets/images/companion_chika.png" alt="Your Travel Buddy Bandung">
-              <div class="polaroid-label">Outdoor Exploration</div>
+              <img src="assets/images/Every picture holds story/TBB MOMENTS/Celebration/IMG_1598.jpeg" alt="Momen Spesial TBB">
+              <div class="polaroid-label">Momen Spesial TBB</div>
             </div>
             
-            <!-- Card 3 (Top): Braga Coffee Tour -->
+            <!-- Card 3 (Top): Cafe Hunting & Spot Aesthetic -->
             <div class="polaroid-card polaroid-3">
-              <img src="assets/images/travel_coffee.png" alt="Cafe Hopping Braga">
-              <div class="polaroid-label">Braga Coffee Tour</div>
+              <img src="assets/images/Every picture holds story/TBB COMPANION/Cafe hunting/IMG_1346.jpg" alt="Cafe Hunting & Spot Aesthetic">
+              <div class="polaroid-label">Cafe Hunting & Spot Aesthetic</div>
             </div>
             
           </div>
@@ -433,7 +428,7 @@
         <div id="panel-care" class="tab-panel grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="col-span-1 md:col-span-3 text-center pt-2 pb-6">
             <p class="font-display italic font-semibold text-[#A85D82] dark:text-[#D9A0BE] text-lg md:text-xl lg:text-2xl tracking-wide leading-relaxed">
-              “Teman yang hadir di momen saat kamu membutuhkan dukungan.”
+              “Layanan bantuan ketika customer membutuhkan seseorang untuk membantu dan mendampingi”
             </p>
           </div>
           
@@ -516,7 +511,7 @@
         <div id="panel-moments" class="tab-panel hidden grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="col-span-1 md:col-span-3 text-center pt-2 pb-6">
             <p class="font-display italic font-semibold text-[#A85D82] dark:text-[#D9A0BE] text-lg md:text-xl lg:text-2xl tracking-wide leading-relaxed">
-              “Rayakan setiap momen spesial bersama seseorang yang siap menemani.”
+              “Layanan dokumentasi yang membantu merayakan momen special”
             </p>
           </div>
 
@@ -598,7 +593,7 @@
         <div id="panel-explore" class="tab-panel hidden grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="col-span-1 md:col-span-3 text-center pt-2 pb-6">
             <p class="font-display italic font-semibold text-[#A85D82] dark:text-[#D9A0BE] text-lg md:text-xl lg:text-2xl tracking-wide leading-relaxed">
-              “Explore Bandung bersama local buddy.”
+              “Layanan teman jarak jauh, naik-turun bukit, dan explore alam Bandung dengan aman.”
             </p>
           </div>
 
@@ -684,7 +679,7 @@
         <div id="panel-companion" class="tab-panel hidden grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="col-span-1 md:col-span-3 text-center pt-2 pb-6">
             <p class="font-display italic font-semibold text-[#A85D82] dark:text-[#D9A0BE] text-lg md:text-xl lg:text-2xl tracking-wide leading-relaxed">
-              “Untuk setiap aktivitas yang terasa lebih nyaman jika ditemani.”
+              “Layanan temani selama menjelajahi kota bandung, city ride &amp; cafe hopping”
             </p>
           </div>
 
@@ -783,7 +778,7 @@
             <div class="w-12 h-12 rounded-full bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center mb-4 text-emerald-600 dark:text-emerald-400 border border-emerald-100/80 dark:border-emerald-900/30">
               <i data-lucide="user-check" class="w-6 h-6"></i>
             </div>
-            <span class="font-sans font-bold text-xs md:text-sm text-ink dark:text-textdark leading-tight">Travel Buddy<br>terseleksi ketat</span>
+            <span class="font-sans font-bold text-xs md:text-sm text-ink dark:text-textdark leading-tight">Travel Buddies<br>terseleksi ketat</span>
           </div>
 
           <!-- Card 2: Konsultasi Pre-Hari H -->
@@ -954,222 +949,244 @@
         <div id="gallery-main-slider" class="gallery-panel flex flex-nowrap gap-8 pb-8 pt-8 overflow-x-auto scrollbar-none snap-x cursor-grab active:cursor-grabbing select-none px-8 max-w-full relative">
           
           <!-- ==================== CATEGORY: CARE ==================== -->
-          <!-- Card 1 -->
+          <!-- Card 1: Antar-Jemput -->
           <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="care" data-base-rotation="-6">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-emerald-500 shadow-md border-t border-white/40 flex items-center justify-center">
               <div class="w-1.5 h-1.5 rounded-full bg-emerald-700"></div>
               <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
             </div>
             <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/travel_coffee.png" alt="Braga Coffee Tour" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <img src="assets/images/Every picture holds story/TBB CARE/Antar-jemput/IMG_1657.jpg" alt="Antar-Jemput" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
               <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Care</span>
-              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Braga Coffee Tour</p>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Antar-Jemput Stasiun / Bandara</p>
             </div>
           </div>
 
-          <!-- Card 2 -->
+          <!-- Card 2: Baby Sitting -->
           <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="care" data-base-rotation="4">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-sky-500 shadow-md border-t border-white/40 flex items-center justify-center">
               <div class="w-1.5 h-1.5 rounded-full bg-sky-700"></div>
               <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
             </div>
             <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/companion_hilma.png" alt="Care Support Hilma" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <img src="assets/images/Every picture holds story/TBB CARE/Baby sitting/IMG_3251.PNG" alt="Baby Sitting" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
               <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Care</span>
-              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Care Support Hilma</p>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Baby Sitting & Pendamping Anak</p>
             </div>
           </div>
 
-          <!-- Card 3 -->
+          <!-- Card 3: Bantuan Administrasi -->
           <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="care" data-base-rotation="-4">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-mauve shadow-md border-t border-white/40 flex items-center justify-center">
               <div class="w-1.5 h-1.5 rounded-full bg-mulberry"></div>
               <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
             </div>
             <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/companion_atikah.png" alt="Care Support Atikah" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <img src="assets/images/Every picture holds story/TBB CARE/Bantuan administrasi/IMG_2196.jpg" alt="Bantuan Administrasi" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
               <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Care</span>
-              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Care Support Atikah</p>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Bantuan Administrasi Ringan</p>
             </div>
           </div>
 
-          <!-- Card 4 -->
+          <!-- Card 4: Caregiver Personal -->
           <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="care" data-base-rotation="5">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-yellow-500 shadow-md border-t border-white/40 flex items-center justify-center">
               <div class="w-1.5 h-1.5 rounded-full bg-yellow-700"></div>
               <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
             </div>
             <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/companion_khusnul.png" alt="Cozy Cafe Chat" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <img src="assets/images/Every picture holds story/TBB CARE/Kebutuhan personal (Caregiver)/IMG_2020.jpg" alt="Kebutuhan Personal" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
               <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Care</span>
-              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Cozy Cafe Chat</p>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Kebutuhan Personal Caregiver</p>
+            </div>
+          </div>
+
+          <!-- Card 5: Pendampingan Kesehatan -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="care" data-base-rotation="-3">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-rose-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-rose-700"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/Every picture holds story/TBB CARE/Pendampingan kesehatan/79529EEE-5BE4-4BAE-86CC-BBE20A6CFAF0.jpg" alt="Pendampingan Kesehatan" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Care</span>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Pendampingan Kesehatan / RS</p>
             </div>
           </div>
 
           <!-- ==================== CATEGORY: MOMENTS ==================== -->
-          <!-- Card 5 -->
+          <!-- Card 6: Acara Teman -->
           <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="moments" data-base-rotation="-5">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-zinc-800 shadow-md border-t border-white/40 flex items-center justify-center">
               <div class="w-1.5 h-1.5 rounded-full bg-black"></div>
               <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
             </div>
             <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/hero_background.png" alt="Braga Walk" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <img src="assets/images/Every picture holds story/TBB MOMENTS/Acara bersama teman atau pasangan/IMG_8376.jpg" alt="Acara Teman" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
               <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Moments</span>
-              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Braga Golden Hour</p>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Acara Teman & Pasangan</p>
             </div>
           </div>
 
-          <!-- Card 6 -->
+          <!-- Card 7: Celebration -->
           <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="moments" data-base-rotation="5">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-orange-500 shadow-md border-t border-white/40 flex items-center justify-center">
               <div class="w-1.5 h-1.5 rounded-full bg-orange-700"></div>
               <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
             </div>
             <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/companion_bella.png" alt="Moments with Bella" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <img src="assets/images/Every picture holds story/TBB MOMENTS/Celebration/IMG_1598.jpeg" alt="Celebration" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
               <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Moments</span>
-              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Aesthetic Braga Tour</p>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Celebration Momen Spesial</p>
             </div>
           </div>
 
-          <!-- Card 7 -->
+          <!-- Card 8: Family Event -->
           <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="moments" data-base-rotation="-3">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-yellow-500 shadow-md border-t border-white/40 flex items-center justify-center">
               <div class="w-1.5 h-1.5 rounded-full bg-yellow-700"></div>
               <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
             </div>
             <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/companion_adzqia.png" alt="Moments with Adzqia" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <img src="assets/images/Every picture holds story/TBB MOMENTS/Family event/IMG_3255.PNG" alt="Family Event" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
               <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Moments</span>
-              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Braga Photo Session</p>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Family Event & Acara Keluarga</p>
             </div>
           </div>
 
-          <!-- Card 8 -->
+          <!-- Card 9: Gathering -->
           <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="moments" data-base-rotation="6">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-blue-500 shadow-md border-t border-white/40 flex items-center justify-center">
               <div class="w-1.5 h-1.5 rounded-full bg-blue-700"></div>
               <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
             </div>
             <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/companion_chika.png" alt="Street Photography" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <img src="assets/images/Every picture holds story/TBB MOMENTS/Gathering/IMG_7405.JPG" alt="Gathering" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
               <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Moments</span>
-              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Street Photography</p>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Gathering & Reuni</p>
+            </div>
+          </div>
+
+          <!-- Card 10: Graduation -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="moments" data-base-rotation="-4">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-purple-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-purple-700"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/Every picture holds story/TBB MOMENTS/Graduation/IMG_5736.jpg" alt="Graduation" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Moments</span>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Wisuda & Graduation Photo</p>
             </div>
           </div>
 
           <!-- ==================== CATEGORY: EXPLORE ==================== -->
-          <!-- Card 9 -->
+          <!-- Card 11: Alam -->
           <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="explore" data-base-rotation="-5">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-emerald-600 shadow-md border-t border-white/40 flex items-center justify-center">
               <div class="w-1.5 h-1.5 rounded-full bg-emerald-800"></div>
               <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
             </div>
             <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/travel_hills.png" alt="Lembang Nature Sunrise" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <img src="assets/images/Every picture holds story/TBB EXPLORE/Alam/IMG_5453.jpg" alt="Alam Bandung" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
               <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Explore</span>
-              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Lembang Nature Trek</p>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Eksplorasi Perbukitan Alam</p>
             </div>
           </div>
 
-          <!-- Card 10 -->
+          <!-- Card 12: Curug -->
           <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="explore" data-base-rotation="6">
-            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-purple-500 shadow-md border-t border-white/40 flex items-center justify-center">
-              <div class="w-1.5 h-1.5 rounded-full bg-purple-700"></div>
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-cyan-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-cyan-700"></div>
               <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
             </div>
             <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/companion_chika.png" alt="Explore with Chika" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <img src="assets/images/Every picture holds story/TBB EXPLORE/Curug/IMG_0395.jpg" alt="Curug" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
               <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Explore</span>
-              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Hiking with Chika</p>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Jelajah Curug & Air Terjun</p>
             </div>
           </div>
 
-          <!-- Card 11 -->
+          <!-- Card 13: Hidden Gem -->
           <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="explore" data-base-rotation="-4">
-            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-red-500 shadow-md border-t border-white/40 flex items-center justify-center">
-              <div class="w-1.5 h-1.5 rounded-full bg-red-700"></div>
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-indigo-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-indigo-700"></div>
               <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
             </div>
             <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/companion_insan.png" alt="Explore with Insan" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <img src="assets/images/Every picture holds story/TBB EXPLORE/Hidden gem/IMG_2808.jpeg" alt="Hidden Gem" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
               <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Explore</span>
-              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Outdoors with Insan</p>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Hidden Gem Bandung</p>
             </div>
           </div>
 
-          <!-- Card 12 -->
+          <!-- Card 14: Eksplorasi Jarak Jauh -->
           <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="explore" data-base-rotation="4">
-            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-orange-500 shadow-md border-t border-white/40 flex items-center justify-center">
-              <div class="w-1.5 h-1.5 rounded-full bg-orange-700"></div>
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-amber-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-amber-700"></div>
               <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
             </div>
             <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/companion_atikah.png" alt="Explore with Atikah" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <img src="assets/images/Every picture holds story/TBB EXPLORE/Ekplorasi jarak jauh/IMG_3066.jpg" alt="Eksplorasi Jarak Jauh" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
               <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Explore</span>
-              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Sunrise Hunt</p>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Eksplorasi Jarak Jauh</p>
+            </div>
+          </div>
+
+          <!-- Card 15: Wisata Alam -->
+          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="explore" data-base-rotation="-5">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-emerald-500 shadow-md border-t border-white/40 flex items-center justify-center">
+              <div class="w-1.5 h-1.5 rounded-full bg-emerald-700"></div>
+              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
+            </div>
+            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
+              <img src="assets/images/Every picture holds story/TBB EXPLORE/Wisata alam/IMG_0093.jpg" alt="Wisata Alam" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Explore</span>
+              <p class="font-display text-sm text-ink dark:text-textdark italic leading-tight">Wisata Alam & Sunrise</p>
             </div>
           </div>
 
           <!-- ==================== CATEGORY: COMPANION ==================== -->
-          <!-- Card 13 -->
+          <!-- Card 16: Cafe Hunting -->
           <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="companion" data-base-rotation="-4">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-yellow-500 shadow-md border-t border-white/40 flex items-center justify-center">
               <div class="w-1.5 h-1.5 rounded-full bg-yellow-700"></div>
               <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
             </div>
             <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/companion_khusnul.png" alt="Companion Khusnul" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <img src="assets/images/Every picture holds story/TBB COMPANION/Cafe hunting/IMG_1346.jpg" alt="Cafe Hunting" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
               <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Companion</span>
-              <p class="font-display text-sm text-center text-ink dark:text-textdark italic leading-tight">Companion Khusnul</p>
+              <p class="font-display text-sm text-center text-ink dark:text-textdark italic leading-tight">Cafe Hunting & Aesthetic Spot</p>
             </div>
           </div>
 
-          <!-- Card 14 -->
+          <!-- Card 17: Shopping -->
           <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="companion" data-base-rotation="6">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-mauve shadow-md border-t border-white/40 flex items-center justify-center">
               <div class="w-1.5 h-1.5 rounded-full bg-mulberry"></div>
               <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
             </div>
             <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/companion_bella.png" alt="Companion Bella" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <img src="assets/images/Every picture holds story/TBB COMPANION/Shopping/IMG_4421.jpg" alt="Shopping" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
               <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Companion</span>
-              <p class="font-display text-sm text-center text-ink dark:text-textdark italic leading-tight">Companion Bella</p>
+              <p class="font-display text-sm text-center text-ink dark:text-textdark italic leading-tight">Shopping & Berburu Oleh-oleh</p>
             </div>
           </div>
 
-          <!-- Card 15 -->
+          <!-- Card 18: Strolling City -->
           <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="companion" data-base-rotation="-5">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-sky-500 shadow-md border-t border-white/40 flex items-center justify-center">
               <div class="w-1.5 h-1.5 rounded-full bg-sky-700"></div>
               <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
             </div>
             <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/companion_chika.png" alt="Companion Chika" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
+              <img src="assets/images/Every picture holds story/TBB COMPANION/Strolling city/IMG_1660.jpg" alt="Strolling City" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
               <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Companion</span>
-              <p class="font-display text-sm text-center text-ink dark:text-textdark italic leading-tight">Companion Chika</p>
-            </div>
-          </div>
-
-          <!-- Card 16 -->
-          <div class="gallery-polaroid-item snap-center flex-shrink-0 z-10 hover:z-20" data-category="companion" data-base-rotation="5">
-            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-emerald-500 shadow-md border-t border-white/40 flex items-center justify-center">
-              <div class="w-1.5 h-1.5 rounded-full bg-emerald-700"></div>
-              <div class="absolute top-3 left-2 w-1.5 h-4 bg-black/10 origin-top rotate-12 pointer-events-none"></div>
-            </div>
-            <div class="bg-white dark:bg-surfacedark p-4 pb-6 rounded-lg border border-purple-100/10 shadow-lg w-[220px] text-center">
-              <img src="assets/images/companion_hilma.png" alt="Companion Hilma" class="w-full h-44 object-cover rounded mb-4 pointer-events-none">
-              <span class="block text-[9px] font-sans font-bold uppercase tracking-widest text-mauve dark:text-blush mb-1">TBB Companion</span>
-              <p class="font-display text-sm text-center text-ink dark:text-textdark italic leading-tight">Companion Hilma</p>
+              <p class="font-display text-sm text-center text-ink dark:text-textdark italic leading-tight">Strolling City & City Ride</p>
             </div>
           </div>
 
         </div>
-
-      </div>
-    </div>
-  </section>
 
       </div>
     </div>
@@ -1225,8 +1242,8 @@
           <div class="relative bg-white dark:bg-surfacedark/40 rounded-[28px] border border-purple-100 dark:border-purple-950/40 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.01)] hover:shadow-soft hover:scale-[1.01] transition-all duration-300 group select-none min-h-[170px]">
             <div class="absolute top-6 right-8 font-display italic text-6xl font-black text-mauve dark:text-textdark opacity-10 group-hover:opacity-25 transition-opacity duration-500">03</div>
             <div class="space-y-2">
-              <span class="text-[10px] uppercase font-bold tracking-wider text-mauve dark:text-blush">Aman & Terkunci</span>
-              <h3 class="font-display font-bold text-lg text-ink dark:text-textdark mt-1">Konfirmasi & Pembayaran</h3>
+              <span class="text-[10px] uppercase font-bold tracking-wider text-mauve dark:text-blush">Aman &amp; Terkunci</span>
+              <h3 class="font-display font-bold text-lg text-ink dark:text-textdark mt-1">Konfirmasi &amp; Pembayaran</h3>
               <p class="text-xs md:text-sm text-ink/70 dark:text-textdark/65 leading-relaxed">
                 Booking jadwal akan dikunci setelah DP atau pembayaran penuh terkonfirmasi. Detail teknis pendampingan dikirim sebelum hari-H.
               </p>
@@ -1246,7 +1263,7 @@
               </div>
               <div>
                 <h3 class="font-display font-bold text-xl text-ink dark:text-textdark">Trip Configurator</h3>
-                <p class="text-xs text-ink/65 dark:text-textdark/65">Sesuaikan trip kamu untuk simulasi harga & format WhatsApp instan.</p>
+                <p class="text-xs text-ink/65 dark:text-textdark/65">Sesuaikan trip kamu untuk simulasi harga &amp; format WhatsApp instan.</p>
               </div>
             </div>
 
@@ -1366,14 +1383,14 @@
               </div>
             </div>
 
-            <!-- Bottom Actions -->
-            <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 pt-0">
-              <button type="button" id="btn-config-whatsapp" class="sm:col-span-8 py-2.5 rounded-2xl bg-[#6B3654] text-white font-bold text-sm hover:bg-mulberry transition-colors shadow-md shadow-mauve/15 flex items-center justify-center gap-2 group">
+            <!-- Bottom Actions: Primary WhatsApp + Secondary Copy -->
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 pt-1">
+              <button type="button" id="btn-config-whatsapp" class="sm:col-span-8 py-3 rounded-2xl bg-[#6B3654] text-white font-bold text-sm hover:bg-mulberry transition-colors shadow-md shadow-mauve/15 flex items-center justify-center gap-2 group">
                 <i data-lucide="message-square" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
                 <span>KIRIM BOOKING VIA WHATSAPP</span>
                 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
               </button>
-              <button type="button" id="btn-config-copy" class="sm:col-span-4 py-2.5 rounded-2xl border border-purple-100 dark:border-purple-950/40 text-mulberry dark:text-textdark font-bold text-sm bg-white dark:bg-surfacedark/20 hover:bg-[#6B3654]/10 dark:hover:bg-[#6B3654]/20 transition-all flex items-center justify-center gap-2">
+              <button type="button" id="btn-config-copy" class="sm:col-span-4 py-3 rounded-2xl border border-purple-100 dark:border-purple-950/40 text-mulberry dark:text-textdark font-bold text-sm bg-white dark:bg-surfacedark/20 hover:bg-[#6B3654]/10 dark:hover:bg-[#6B3654]/20 transition-all flex items-center justify-center gap-2">
                 <i data-lucide="copy" class="w-4.5 h-4.5"></i>
                 <span>SALIN PESAN</span>
               </button>
@@ -1409,15 +1426,20 @@
           <!-- Card 1: Khusnul -->
           <div class="carousel-item">
             <div class="companion-card flex flex-col bg-white dark:bg-surfacedark rounded-3xl border border-purple-100 dark:border-purple-950/40 overflow-hidden transition-theme hover:shadow-xl tilt-card">
-              <div class="h-72 overflow-hidden relative">
-                <img src="assets/images/companion_khusnul.png" alt="Khusnul" class="w-full h-full object-cover">
+              <div class="h-80 overflow-hidden relative">
+                <img src="assets/images/Foto companion/khusnul.jpg" alt="Khusnul" class="w-full h-full object-cover">
+                <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-mauve/90 backdrop-blur-md text-white text-xs font-bold font-sans shadow-md flex items-center gap-1.5">
+                  <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+                  <span>iPhone 13 Pro</span>
+                </div>
               </div>
               <div class="p-6 space-y-3">
-                <h3 class="font-bold text-xl text-ink dark:text-textdark">Khusnul</h3>
-                <p class="text-xs text-mauve dark:text-mauve-dark font-semibold">@khusnul.hilal</p>
-                <p class="text-sm text-ink/85 dark:text-textdark/85 leading-relaxed">
-                  Friendly, supel, dan berpengalaman luas memandu perjalanan santai keliling sudut-sudut estetis Bandung.
-                </p>
+                <h3 class="font-bold text-2xl text-ink dark:text-textdark">Khusnul</h3>
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Explore</span>
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Companion</span>
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Moments</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1425,15 +1447,20 @@
           <!-- Card 2: Hilma -->
           <div class="carousel-item">
             <div class="companion-card flex flex-col bg-white dark:bg-surfacedark rounded-3xl border border-purple-100 dark:border-purple-950/40 overflow-hidden transition-theme hover:shadow-xl tilt-card">
-              <div class="h-72 overflow-hidden relative">
-                <img src="assets/images/companion_hilma.png" alt="Hilma" class="w-full h-full object-cover">
+              <div class="h-80 overflow-hidden relative">
+                <img src="assets/images/Foto companion/hilma.jpg" alt="Hilma" class="w-full h-full object-cover">
+                <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-mauve/90 backdrop-blur-md text-white text-xs font-bold font-sans shadow-md flex items-center gap-1.5">
+                  <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+                  <span>iPhone 11 Pro</span>
+                </div>
               </div>
               <div class="p-6 space-y-3">
-                <h3 class="font-bold text-xl text-ink dark:text-textdark">Hilma</h3>
-                <p class="text-xs text-mauve dark:text-mauve-dark font-semibold">@hilma.hlmh</p>
-                <p class="text-sm text-ink/85 dark:text-textdark/85 leading-relaxed">
-                  Peduli, ramah, komunikatif. Sangat andal menemani urusan administrasi, medis, maupun kulineran Bandung.
-                </p>
+                <h3 class="font-bold text-2xl text-ink dark:text-textdark">Hilma</h3>
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Companion</span>
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Moments</span>
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Care</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1441,64 +1468,83 @@
           <!-- Card 3: Adzqia -->
           <div class="carousel-item">
             <div class="companion-card flex flex-col bg-white dark:bg-surfacedark rounded-3xl border border-purple-100 dark:border-purple-950/40 overflow-hidden transition-theme hover:shadow-xl tilt-card">
-              <div class="h-72 overflow-hidden relative">
-                <img src="assets/images/companion_adzqia.png" alt="Adzqia" class="w-full h-full object-cover">
+              <div class="h-80 overflow-hidden relative">
+                <img src="assets/images/Foto companion/adzqia.jpg" alt="Adzqia" class="w-full h-full object-cover">
+                <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-mauve/90 backdrop-blur-md text-white text-xs font-bold font-sans shadow-md flex items-center gap-1.5">
+                  <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+                  <span>iPhone 13</span>
+                </div>
               </div>
               <div class="p-6 space-y-3">
-                <h3 class="font-bold text-xl text-ink dark:text-textdark">Adzqia</h3>
-                <p class="text-xs text-mauve dark:text-mauve-dark font-semibold">@adzqia</p>
-                <p class="text-sm text-ink/85 dark:text-textdark/85 leading-relaxed">
-                  Guide yang ceria, easy going, dan tahu semua spot foto aesthetic terbaik yang tersembunyi di Bandung.
-                </p>
+                <h3 class="font-bold text-2xl text-ink dark:text-textdark">Adzqia</h3>
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Companion</span>
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Moments</span>
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Care</span>
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Explore</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 4: Atikah -->
+          <!-- Card 4: Nadwah -->
           <div class="carousel-item">
             <div class="companion-card flex flex-col bg-white dark:bg-surfacedark rounded-3xl border border-purple-100 dark:border-purple-950/40 overflow-hidden transition-theme hover:shadow-xl tilt-card">
-              <div class="h-72 overflow-hidden relative">
-                <img src="assets/images/companion_atikah.png" alt="Atikah" class="w-full h-full object-cover">
-                <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-sage text-white text-xs font-bold uppercase tracking-wider">Monday Only</div>
+              <div class="h-80 overflow-hidden relative">
+                <img src="assets/images/Foto companion/nadwah.jpg" alt="Nadwah" class="w-full h-full object-cover">
+                <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-mauve/90 backdrop-blur-md text-white text-xs font-bold font-sans shadow-md flex items-center gap-1.5">
+                  <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+                  <span>iPhone 15 Pro Max</span>
+                </div>
               </div>
               <div class="p-6 space-y-3">
-                <h3 class="font-bold text-xl text-ink dark:text-textdark">Atikah</h3>
-                <p class="text-xs text-mauve dark:text-mauve-dark font-semibold">@atikah</p>
-                <p class="text-sm text-ink/85 dark:text-textdark/85 leading-relaxed">
-                  Sabar, kalem, dan pendengar yang baik. Sangat cocok menemani aktivitas santai di awal pekan Anda.
-                </p>
+                <h3 class="font-bold text-2xl text-ink dark:text-textdark">Nadwah</h3>
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Moments</span>
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Companion</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 5: Bella -->
+          <!-- Card 5: Rita -->
           <div class="carousel-item">
             <div class="companion-card flex flex-col bg-white dark:bg-surfacedark rounded-3xl border border-purple-100 dark:border-purple-950/40 overflow-hidden transition-theme hover:shadow-xl tilt-card">
-              <div class="h-72 overflow-hidden relative">
-                <img src="assets/images/companion_bella.png" alt="Bella" class="w-full h-full object-cover">
+              <div class="h-80 overflow-hidden relative">
+                <img src="assets/images/Foto companion/rita.jpg" alt="Rita" class="w-full h-full object-cover">
+                <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-mauve/90 backdrop-blur-md text-white text-xs font-bold font-sans shadow-md flex items-center gap-1.5">
+                  <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+                  <span>iPhone 11</span>
+                </div>
               </div>
               <div class="p-6 space-y-3">
-                <h3 class="font-bold text-xl text-ink dark:text-textdark">Bella</h3>
-                <p class="text-xs text-mauve dark:text-mauve-dark font-semibold">@bella.travel</p>
-                <p class="text-sm text-ink/85 dark:text-textdark/85 leading-relaxed">
-                  Penyuka sejarah dan arsitektur kuno. Siap mendampingi Anda berburu foto klasik di Braga dan sekitarnya.
-                </p>
+                <h3 class="font-bold text-2xl text-ink dark:text-textdark">Rita</h3>
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Explore</span>
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Companion</span>
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Care</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 6: Chika -->
+          <!-- Card 6: Aqilah -->
           <div class="carousel-item">
             <div class="companion-card flex flex-col bg-white dark:bg-surfacedark rounded-3xl border border-purple-100 dark:border-purple-950/40 overflow-hidden transition-theme hover:shadow-xl tilt-card">
-              <div class="h-72 overflow-hidden relative">
-                <img src="assets/images/companion_chika.png" alt="Chika" class="w-full h-full object-cover">
+              <div class="h-80 overflow-hidden relative">
+                <img src="assets/images/Foto companion/aqilah.jpg" alt="Aqilah" class="w-full h-full object-cover">
+                <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-mauve/90 backdrop-blur-md text-white text-xs font-bold font-sans shadow-md flex items-center gap-1.5">
+                  <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+                  <span>iPhone 13</span>
+                </div>
               </div>
               <div class="p-6 space-y-3">
-                <h3 class="font-bold text-xl text-ink dark:text-textdark">Chika</h3>
-                <p class="text-xs text-mauve dark:text-mauve-dark font-semibold">@chika.buddy</p>
-                <p class="text-sm text-ink/85 dark:text-textdark/85 leading-relaxed">
-                  Aktif, menyukai petualangan alam, dan siap menemani trekking seru menyusuri perbukitan hijau Bandung.
-                </p>
+                <h3 class="font-bold text-2xl text-ink dark:text-textdark">Aqilah</h3>
+                <div class="flex flex-wrap gap-1.5 pt-1">
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Explore</span>
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Companion</span>
+                  <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 text-mauve dark:text-blush border border-purple-100 dark:border-purple-900/30">TBB Moments</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1541,73 +1587,71 @@
       <div class="absolute right-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-l from-cream via-cream/20 to-transparent pointer-events-none z-10 dark:from-bgdark dark:via-bgdark/20"></div>
 
       <!-- Row 1: Leftward infinite scroll -->
-      <div id="marquee-row-1" class="marquee-row-container flex mb-5 cursor-grab active:cursor-grabbing select-none">
-        <div class="marquee-track flex gap-6">
+      <div id="marquee-row-1" class="marquee-row-container flex mb-4 cursor-grab active:cursor-grabbing select-none">
+        <div class="marquee-track flex gap-5">
           
           <!-- Card 1 -->
-          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
-            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
-              <img src="assets/images/review_whatsapp_1.png" alt="Review Siska" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+          <div class="w-[320px] sm:w-[380px] md:w-[420px] p-3 bg-white/95 dark:bg-surfacedark/80 rounded-[24px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-2 flex-shrink-0 shadow-[0_8px_25px_rgba(168,93,130,0.08)] hover:shadow-[0_15px_35px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[170px] sm:h-[200px] md:h-[220px] p-1.5 flex items-center justify-center">
+              <img src="assets/images/Testimoni TBB/Untuk web/IMG_3189.PNG" alt="Testimoni WhatsApp TBB" class="w-full h-full object-contain object-center rounded-lg pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
             </div>
-            <div class="flex items-center gap-3 px-1">
-              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">SA</div>
-              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Siska Amanda</span>
+            <div class="flex items-center gap-2.5 px-1 py-0.5">
+              <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-[10px] shadow-sm">TB</div>
+              <span class="font-sans font-bold text-xs text-mulberry dark:text-textdark">Verified Traveler Review</span>
             </div>
           </div>
 
           <!-- Card 2 -->
-          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
-            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
-              <img src="assets/images/review_whatsapp_2.png" alt="Review Ratih" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+          <div class="w-[320px] sm:w-[380px] md:w-[420px] p-3 bg-white/95 dark:bg-surfacedark/80 rounded-[24px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-2 flex-shrink-0 shadow-[0_8px_25px_rgba(168,93,130,0.08)] hover:shadow-[0_15px_35px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[170px] sm:h-[200px] md:h-[220px] p-1.5 flex items-center justify-center">
+              <img src="assets/images/Testimoni TBB/Untuk web/IMG_3190.PNG" alt="Testimoni WhatsApp TBB" class="w-full h-full object-contain object-center rounded-lg pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
             </div>
-            <div class="flex items-center gap-3 px-1">
-              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">RP</div>
-              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Ratih P.</span>
+            <div class="flex items-center gap-2.5 px-1 py-0.5">
+              <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-[10px] shadow-sm">TB</div>
+              <span class="font-sans font-bold text-xs text-mulberry dark:text-textdark">Verified Traveler Review</span>
             </div>
           </div>
 
           <!-- Card 3 -->
-          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
-            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
-              <img src="assets/images/review_whatsapp_3.png" alt="Review Devi" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+          <div class="w-[320px] sm:w-[380px] md:w-[420px] p-3 bg-white/95 dark:bg-surfacedark/80 rounded-[24px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-2 flex-shrink-0 shadow-[0_8px_25px_rgba(168,93,130,0.08)] hover:shadow-[0_15px_35px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[170px] sm:h-[200px] md:h-[220px] p-1.5 flex items-center justify-center">
+              <img src="assets/images/Testimoni TBB/Untuk web/IMG_3191.PNG" alt="Testimoni WhatsApp TBB" class="w-full h-full object-contain object-center rounded-lg pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
             </div>
-            <div class="flex items-center gap-3 px-1">
-              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">DS</div>
-              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Devi Shanti</span>
+            <div class="flex items-center gap-2.5 px-1 py-0.5">
+              <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-[10px] shadow-sm">TB</div>
+              <span class="font-sans font-bold text-xs text-mulberry dark:text-textdark">Verified Traveler Review</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="w-[320px] sm:w-[380px] md:w-[420px] p-3 bg-white/95 dark:bg-surfacedark/80 rounded-[24px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-2 flex-shrink-0 shadow-[0_8px_25px_rgba(168,93,130,0.08)] hover:shadow-[0_15px_35px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[170px] sm:h-[200px] md:h-[220px] p-1.5 flex items-center justify-center">
+              <img src="assets/images/Testimoni TBB/Untuk web/IMG_3192.PNG" alt="Testimoni WhatsApp TBB" class="w-full h-full object-contain object-center rounded-lg pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-2.5 px-1 py-0.5">
+              <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-[10px] shadow-sm">TB</div>
+              <span class="font-sans font-bold text-xs text-mulberry dark:text-textdark">Verified Traveler Review</span>
             </div>
           </div>
 
           <!-- Duplicate Cards for Loop -->
-          <!-- Card 1 -->
-          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
-            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
-              <img src="assets/images/review_whatsapp_1.png" alt="Review Siska" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+          <div class="w-[320px] sm:w-[380px] md:w-[420px] p-3 bg-white/95 dark:bg-surfacedark/80 rounded-[24px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-2 flex-shrink-0 shadow-[0_8px_25px_rgba(168,93,130,0.08)] hover:shadow-[0_15px_35px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[170px] sm:h-[200px] md:h-[220px] p-1.5 flex items-center justify-center">
+              <img src="assets/images/Testimoni TBB/Untuk web/IMG_3189.PNG" alt="Testimoni WhatsApp TBB" class="w-full h-full object-contain object-center rounded-lg pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
             </div>
-            <div class="flex items-center gap-3 px-1">
-              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">SA</div>
-              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Siska Amanda</span>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
-            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
-              <img src="assets/images/review_whatsapp_2.png" alt="Review Ratih" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
-            </div>
-            <div class="flex items-center gap-3 px-1">
-              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">RP</div>
-              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Ratih P.</span>
+            <div class="flex items-center gap-2.5 px-1 py-0.5">
+              <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-[10px] shadow-sm">TB</div>
+              <span class="font-sans font-bold text-xs text-mulberry dark:text-textdark">Verified Traveler Review</span>
             </div>
           </div>
 
-          <!-- Card 3 -->
-          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
-            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
-              <img src="assets/images/review_whatsapp_3.png" alt="Review Devi" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+          <div class="w-[320px] sm:w-[380px] md:w-[420px] p-3 bg-white/95 dark:bg-surfacedark/80 rounded-[24px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-2 flex-shrink-0 shadow-[0_8px_25px_rgba(168,93,130,0.08)] hover:shadow-[0_15px_35px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[170px] sm:h-[200px] md:h-[220px] p-1.5 flex items-center justify-center">
+              <img src="assets/images/Testimoni TBB/Untuk web/IMG_3190.PNG" alt="Testimoni WhatsApp TBB" class="w-full h-full object-contain object-center rounded-lg pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
             </div>
-            <div class="flex items-center gap-3 px-1">
-              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">DS</div>
-              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Devi Shanti</span>
+            <div class="flex items-center gap-2.5 px-1 py-0.5">
+              <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-[10px] shadow-sm">TB</div>
+              <span class="font-sans font-bold text-xs text-mulberry dark:text-textdark">Verified Traveler Review</span>
             </div>
           </div>
 
@@ -1616,72 +1660,70 @@
 
       <!-- Row 2: Rightward infinite scroll -->
       <div id="marquee-row-2" class="marquee-row-container flex cursor-grab active:cursor-grabbing select-none">
-        <div class="marquee-track flex gap-6">
+        <div class="marquee-track flex gap-5">
           
-          <!-- Card 4 -->
-          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
-            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
-              <img src="assets/images/review_whatsapp_4.png" alt="Review Annisa" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
-            </div>
-            <div class="flex items-center gap-3 px-1">
-              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">AL</div>
-              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Annisa Lubis</span>
-            </div>
-          </div>
-
           <!-- Card 5 -->
-          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
-            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
-              <img src="assets/images/review_whatsapp_5.png" alt="Review Viona" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+          <div class="w-[320px] sm:w-[380px] md:w-[420px] p-3 bg-white/95 dark:bg-surfacedark/80 rounded-[24px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-2 flex-shrink-0 shadow-[0_8px_25px_rgba(168,93,130,0.08)] hover:shadow-[0_15px_35px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[170px] sm:h-[200px] md:h-[220px] p-1.5 flex items-center justify-center">
+              <img src="assets/images/Testimoni TBB/Untuk web/IMG_3193.PNG" alt="Testimoni WhatsApp TBB" class="w-full h-full object-contain object-center rounded-lg pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
             </div>
-            <div class="flex items-center gap-3 px-1">
-              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">VT</div>
-              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Viona Tan</span>
+            <div class="flex items-center gap-2.5 px-1 py-0.5">
+              <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-[10px] shadow-sm">TB</div>
+              <span class="font-sans font-bold text-xs text-mulberry dark:text-textdark">Verified Traveler Review</span>
             </div>
           </div>
 
           <!-- Card 6 -->
-          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
-            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
-              <img src="assets/images/review_whatsapp_6.png" alt="Review Sara" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+          <div class="w-[320px] sm:w-[380px] md:w-[420px] p-3 bg-white/95 dark:bg-surfacedark/80 rounded-[24px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-2 flex-shrink-0 shadow-[0_8px_25px_rgba(168,93,130,0.08)] hover:shadow-[0_15px_35px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[170px] sm:h-[200px] md:h-[220px] p-1.5 flex items-center justify-center">
+              <img src="assets/images/Testimoni TBB/Untuk web/IMG_3194.PNG" alt="Testimoni WhatsApp TBB" class="w-full h-full object-contain object-center rounded-lg pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
             </div>
-            <div class="flex items-center gap-3 px-1">
-              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">SF</div>
-              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Sara Farah</span>
+            <div class="flex items-center gap-2.5 px-1 py-0.5">
+              <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-[10px] shadow-sm">TB</div>
+              <span class="font-sans font-bold text-xs text-mulberry dark:text-textdark">Verified Traveler Review</span>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="w-[320px] sm:w-[380px] md:w-[420px] p-3 bg-white/95 dark:bg-surfacedark/80 rounded-[24px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-2 flex-shrink-0 shadow-[0_8px_25px_rgba(168,93,130,0.08)] hover:shadow-[0_15px_35px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[170px] sm:h-[200px] md:h-[220px] p-1.5 flex items-center justify-center">
+              <img src="assets/images/Testimoni TBB/Untuk web/IMG_3195.PNG" alt="Testimoni WhatsApp TBB" class="w-full h-full object-contain object-center rounded-lg pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-2.5 px-1 py-0.5">
+              <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-[10px] shadow-sm">TB</div>
+              <span class="font-sans font-bold text-xs text-mulberry dark:text-textdark">Verified Traveler Review</span>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="w-[320px] sm:w-[380px] md:w-[420px] p-3 bg-white/95 dark:bg-surfacedark/80 rounded-[24px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-2 flex-shrink-0 shadow-[0_8px_25px_rgba(168,93,130,0.08)] hover:shadow-[0_15px_35px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[170px] sm:h-[200px] md:h-[220px] p-1.5 flex items-center justify-center">
+              <img src="assets/images/Testimoni TBB/Untuk web/IMG_3196.PNG" alt="Testimoni WhatsApp TBB" class="w-full h-full object-contain object-center rounded-lg pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            <div class="flex items-center gap-2.5 px-1 py-0.5">
+              <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-[10px] shadow-sm">TB</div>
+              <span class="font-sans font-bold text-xs text-mulberry dark:text-textdark">Verified Traveler Review</span>
             </div>
           </div>
 
           <!-- Duplicate Cards for Loop -->
-          <!-- Card 4 -->
-          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
-            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
-              <img src="assets/images/review_whatsapp_4.png" alt="Review Annisa" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+          <div class="w-[320px] sm:w-[380px] md:w-[420px] p-3 bg-white/95 dark:bg-surfacedark/80 rounded-[24px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-2 flex-shrink-0 shadow-[0_8px_25px_rgba(168,93,130,0.08)] hover:shadow-[0_15px_35px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[170px] sm:h-[200px] md:h-[220px] p-1.5 flex items-center justify-center">
+              <img src="assets/images/Testimoni TBB/Untuk web/IMG_3193.PNG" alt="Testimoni WhatsApp TBB" class="w-full h-full object-contain object-center rounded-lg pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
             </div>
-            <div class="flex items-center gap-3 px-1">
-              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">AL</div>
-              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Annisa Lubis</span>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
-            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
-              <img src="assets/images/review_whatsapp_5.png" alt="Review Viona" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
-            </div>
-            <div class="flex items-center gap-3 px-1">
-              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">VT</div>
-              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Viona Tan</span>
+            <div class="flex items-center gap-2.5 px-1 py-0.5">
+              <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-[10px] shadow-sm">TB</div>
+              <span class="font-sans font-bold text-xs text-mulberry dark:text-textdark">Verified Traveler Review</span>
             </div>
           </div>
 
-          <!-- Card 6 -->
-          <div class="w-[380px] sm:w-[460px] md:w-[500px] p-5 bg-white/95 dark:bg-surfacedark/80 rounded-[28px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-4 flex-shrink-0 shadow-[0_10px_35px_rgba(168,93,130,0.08)] hover:shadow-[0_20px_45px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
-            <div class="rounded-2xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[220px] sm:h-[270px] md:h-[300px] p-2 flex items-center justify-center">
-              <img src="assets/images/review_whatsapp_6.png" alt="Review Sara" class="w-full h-full object-contain object-center rounded-xl pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
+          <div class="w-[320px] sm:w-[380px] md:w-[420px] p-3 bg-white/95 dark:bg-surfacedark/80 rounded-[24px] border border-purple-100 dark:border-purple-950/40 flex flex-col gap-2 flex-shrink-0 shadow-[0_8px_25px_rgba(168,93,130,0.08)] hover:shadow-[0_15px_35px_rgba(168,93,130,0.15)] hover:-translate-y-1 transition-all duration-300 group">
+            <div class="rounded-xl overflow-hidden border border-purple-100/50 dark:border-purple-950/30 bg-[#efeae2] dark:bg-[#0b141a] h-[170px] sm:h-[200px] md:h-[220px] p-1.5 flex items-center justify-center">
+              <img src="assets/images/Testimoni TBB/Untuk web/IMG_3194.PNG" alt="Testimoni WhatsApp TBB" class="w-full h-full object-contain object-center rounded-lg pointer-events-none group-hover:scale-[1.02] transition-transform duration-500">
             </div>
-            <div class="flex items-center gap-3 px-1">
-              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-xs shadow-sm">SF</div>
-              <span class="font-sans font-bold text-sm text-mulberry dark:text-textdark">Sara Farah</span>
+            <div class="flex items-center gap-2.5 px-1 py-0.5">
+              <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-mauve to-mulberry text-white flex items-center justify-center font-sans font-bold text-[10px] shadow-sm">TB</div>
+              <span class="font-sans font-bold text-xs text-mulberry dark:text-textdark">Verified Traveler Review</span>
             </div>
           </div>
 
@@ -1701,11 +1743,6 @@
           
           <!-- Left text block -->
           <div class="lg:col-span-7 space-y-6">
-            <!-- Badge Kecil -->
-            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-mauve/20 bg-white/80 dark:bg-surfacedark/80 text-[10px] font-bold uppercase tracking-wider text-mauve dark:text-blush">
-              <i data-lucide="handshake" class="w-3.5 h-3.5 text-mauve"></i>
-              JOIN FORCES ✨
-            </span>
             <!-- Judul Utama -->
             <h2 class="font-display text-3xl md:text-5xl font-extrabold text-ink dark:text-textdark leading-tight select-none">
               Open Collaboration <br>
@@ -1717,41 +1754,117 @@
             </p>
             <!-- Tombol CTA -->
             <div class="pt-2">
-              <a href="#" class="wa-main-link inline-flex items-center gap-2 px-7 py-4 rounded-full bg-mulberry dark:bg-mauve text-white text-xs md:text-sm font-bold uppercase tracking-widest hover:bg-mulberry/90 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+              <a href="#" class="wa-collab-link inline-flex items-center gap-2 px-7 py-4 rounded-full bg-mulberry dark:bg-mauve text-white text-xs md:text-sm font-bold uppercase tracking-widest hover:bg-mulberry/90 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
                 <span>HUBUNGI KAMI UNTUK KOLABORASI</span>
                 <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
               </a>
             </div>
           </div>
 
-          <!-- Right showcase block (Emina cosmetics card) -->
+          <!-- Right showcase block (Emina cosmetics interactive carousel card) -->
           <div class="lg:col-span-5 flex justify-center w-full">
-            <!-- Glassmorphic Card -->
-            <div class="w-full max-w-sm bg-white/70 dark:bg-surfacedark/60 backdrop-blur-md p-8 rounded-[28px] border border-dashed border-mauve/40 shadow-[0_15px_35px_rgba(168,93,130,0.06)] flex flex-col items-center text-center gap-6 relative hover:scale-[1.01] transition-transform duration-300">
+            <!-- Glassmorphic Card with Carousel -->
+            <div class="w-full max-w-md bg-white/90 dark:bg-surfacedark/80 backdrop-blur-md p-6 rounded-[28px] border border-mauve/30 shadow-[0_15px_35px_rgba(168,93,130,0.1)] flex flex-col items-center text-center gap-4 relative overflow-hidden group">
               
               <!-- Sub-judul Kecil -->
-              <span class="text-[9px] uppercase font-bold text-mauve dark:text-blush tracking-widest">OFFICIAL LAUNCH PARTNER</span>
-              
-              <!-- Logo Partner -->
-              <div class="flex flex-col items-center">
-                <div class="flex items-center gap-1 select-none">
-                  <span class="font-sans font-black text-3xl tracking-tight text-[#E84E89]">emina</span>
-                  <i data-lucide="heart" class="w-4 h-4 fill-[#E84E89] text-[#E84E89]"></i>
-                </div>
-                <span class="text-[9px] uppercase font-bold text-ink/40 dark:text-textdark/40 tracking-[0.25em] mt-1">COSMETICS</span>
+              <div class="flex items-center justify-between w-full px-2">
+                <span class="text-[9px] uppercase font-bold text-mauve dark:text-blush tracking-widest flex items-center gap-1">
+                  <i data-lucide="sparkles" class="w-3 h-3 text-mauve"></i>
+                  OFFICIAL LAUNCH PARTNER
+                </span>
+                <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-mauve/10 text-mauve dark:text-blush border border-mauve/20">Active Collab</span>
               </div>
               
-              <!-- Slogan Italic -->
-              <p class="font-display italic text-lg text-ink/80 dark:text-textdark/80">“Beauty in Simplicity”</p>
+              <!-- Carousel Image Container -->
+              <div class="relative w-full rounded-2xl overflow-hidden bg-purple-50 dark:bg-bgdark aspect-[4/3] group/slider">
+                
+                <!-- Track -->
+                <div id="emina-carousel-track" class="flex w-full h-full transition-transform duration-500 ease-out">
+                  
+                  <!-- Slide 1: HEADLINE - PASS GATE -->
+                  <div class="w-full h-full flex-shrink-0 relative">
+                    <img src="assets/images/TBB X EMINA/EMINA P.A.S.S GATE (HEADLINE)/EMINA PASS GATE.jpeg" alt="EMINA LAUNCH P.A.S.S GATE" class="w-full h-full object-cover">
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3 text-left">
+                      <span class="text-[9px] uppercase font-bold text-blush tracking-wider block">HEADLINE</span>
+                      <p class="text-xs font-bold text-white font-display">EMINA LAUNCH "P.A.S.S GATE"</p>
+                      <p class="text-[10px] text-white/80 font-sans">Look Studio Showcase</p>
+                    </div>
+                  </div>
+
+                  <!-- Slide 2 -->
+                  <div class="w-full h-full flex-shrink-0 relative">
+                    <img src="assets/images/TBB X EMINA/2.png" alt="TBB x Emina Collab 2" class="w-full h-full object-cover">
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3 text-left">
+                      <p class="text-xs font-bold text-white font-display">TBB × Emina Collab</p>
+                    </div>
+                  </div>
+
+                  <!-- Slide 3 -->
+                  <div class="w-full h-full flex-shrink-0 relative">
+                    <img src="assets/images/TBB X EMINA/3.png" alt="TBB x Emina Collab 3" class="w-full h-full object-cover">
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3 text-left">
+                      <p class="text-xs font-bold text-white font-display">Beauty in Simplicity</p>
+                    </div>
+                  </div>
+
+                  <!-- Slide 4 -->
+                  <div class="w-full h-full flex-shrink-0 relative">
+                    <img src="assets/images/TBB X EMINA/4.png" alt="TBB x Emina Collab 4" class="w-full h-full object-cover">
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3 text-left">
+                      <p class="text-xs font-bold text-white font-display">Travel Companion Experience</p>
+                    </div>
+                  </div>
+
+                  <!-- Slide 5 -->
+                  <div class="w-full h-full flex-shrink-0 relative">
+                    <img src="assets/images/TBB X EMINA/5.png" alt="TBB x Emina Collab 5" class="w-full h-full object-cover">
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3 text-left">
+                      <p class="text-xs font-bold text-white font-display">Girlhood & Travel Moments</p>
+                    </div>
+                  </div>
+
+                  <!-- Slide 6 -->
+                  <div class="w-full h-full flex-shrink-0 relative">
+                    <img src="assets/images/TBB X EMINA/7.png" alt="TBB x Emina Collab 7" class="w-full h-full object-cover">
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3 text-left">
+                      <p class="text-xs font-bold text-white font-display">Emina Active Collab</p>
+                    </div>
+                  </div>
+
+                  <!-- Slide 7 -->
+                  <div class="w-full h-full flex-shrink-0 relative">
+                    <img src="assets/images/TBB X EMINA/8.png" alt="TBB x Emina Collab 8" class="w-full h-full object-cover">
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3 text-left">
+                      <p class="text-xs font-bold text-white font-display">Bandung Exploration with Emina</p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Navigation Controls -->
+                <button type="button" id="emina-prev" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 dark:bg-surfacedark/80 text-mulberry flex items-center justify-center shadow-md hover:bg-mauve hover:text-white transition-all z-10" aria-label="Previous Slide">
+                  <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                </button>
+                <button type="button" id="emina-next" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 dark:bg-surfacedark/80 text-mulberry flex items-center justify-center shadow-md hover:bg-mauve hover:text-white transition-all z-10" aria-label="Next Slide">
+                  <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+
+              </div>
+
+              <!-- Indicators Dots -->
+              <div class="flex items-center gap-1.5 py-1">
+                <button type="button" class="emina-dot h-2 w-6 rounded-full bg-mauve transition-all" aria-label="Slide 1"></button>
+                <button type="button" class="emina-dot h-2 w-2 rounded-full bg-mauve/30 transition-all" aria-label="Slide 2"></button>
+                <button type="button" class="emina-dot h-2 w-2 rounded-full bg-mauve/30 transition-all" aria-label="Slide 3"></button>
+                <button type="button" class="emina-dot h-2 w-2 rounded-full bg-mauve/30 transition-all" aria-label="Slide 4"></button>
+                <button type="button" class="emina-dot h-2 w-2 rounded-full bg-mauve/30 transition-all" aria-label="Slide 5"></button>
+                <button type="button" class="emina-dot h-2 w-2 rounded-full bg-mauve/30 transition-all" aria-label="Slide 6"></button>
+                <button type="button" class="emina-dot h-2 w-2 rounded-full bg-mauve/30 transition-all" aria-label="Slide 7"></button>
+              </div>
               
-              <!-- Deskripsi Partner -->
-              <p class="text-xs text-ink/65 dark:text-textdark/65 leading-relaxed font-sans">
-                Mendukung kepercayaan diri para traveler perempuan untuk bersinar di setiap petualangan serunya.
-              </p>
-              
-              <!-- Pembatas Bawah -->
-              <div class="w-full border-t border-dashed border-purple-100 dark:border-purple-950/20 pt-4 flex items-center justify-center gap-1 text-[9px] uppercase font-bold text-mauve dark:text-blush tracking-wider">
-                <span>💖 TBB × EMINA PARTNERSHIP</span>
+              <!-- Footer Badge -->
+              <div class="w-full border-t border-dashed border-purple-100 dark:border-purple-950/20 pt-3 flex items-center justify-center gap-1 text-[10px] uppercase font-bold text-mauve dark:text-blush tracking-wider">
+                <span>💖 TBB × EMINA PARTNERSHIP (OCTOBER 2026)</span>
               </div>
               
             </div>
@@ -1811,10 +1924,7 @@
       <!-- Branding Column -->
       <div class="md:col-span-4 space-y-4">
         <div class="flex items-center gap-2 select-none">
-          <svg class="w-7 h-7" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 70C20 40 40 20 55 20C70 20 80 35 80 50C80 65 65 80 45 80C25 80 15 65 15 50C15 30 35 15 60 15" stroke="#F5E9EF" stroke-width="12" stroke-linecap="round" fill="none"/>
-          </svg>
-          <span class="font-display text-xl font-bold tracking-tight text-white">TBB</span>
+          <img src="assets/images/Logo/logodarkmode.png" alt="TBB - Travel Buddy Bandung" class="h-10 md:h-12 w-auto object-contain">
         </div>
         <p class="text-xs text-purple-200/70 max-w-sm">
           Jasa Local Companion khusus untuk perempuan traveler di Bandung. Menghadirkan rasa aman, nyaman, dan privasi penuh di setiap sudut petualangan.
