@@ -923,7 +923,7 @@ function initTripConfigurator() {
 
   if (!categorySelect || !tierSelect) return;
 
-  // Data structure for package rates
+  // Data structure for package rates (Synchronized with official SERVICES_DATA)
   const packages = {
     care: [
       { id: "care-support", name: "Care Support (Tier 1)", duration: "2 Jam", price: 90000 },
@@ -931,18 +931,18 @@ function initTripConfigurator() {
       { id: "care-full", name: "Care Full (Tier 3)", duration: "8 Jam", price: 299000 }
     ],
     moments: [
-      { id: "moments-mini", name: "Moments Mini (Tier 1)", duration: "2 Jam", price: 119000 },
-      { id: "moments-signature", name: "Moments Signature (Tier 2)", duration: "4 Jam", price: 229000 },
-      { id: "moments-signature-plus", name: "Moments Signature Plus (Tier 3)", duration: "6 Jam", price: 349000 }
+      { id: "moments-mini", name: "Moments Mini (Tier 1)", duration: "3 Jam", price: 199000 },
+      { id: "moments-classic", name: "Moments Classic (Tier 2)", duration: "5 Jam", price: 299000 },
+      { id: "moments-signature", name: "Moments Signature (Tier 3)", duration: "8 Jam", price: 449000 }
     ],
     explore: [
-      { id: "explore-start", name: "Explore Start (Tier 1)", duration: "3 Jam", price: 129000 },
-      { id: "explore-day", name: "Explore Day (Tier 2)", duration: "5 Jam", price: 259000 },
-      { id: "explore-max", name: "Explore Max (Tier 3)", duration: "8 Jam", price: 379000 }
+      { id: "explore-start", name: "Explore Start (Tier 1)", duration: "5 Jam", price: 250000 },
+      { id: "explore-day", name: "Explore Day (Tier 2)", duration: "8 Jam", price: 399000 },
+      { id: "explore-max", name: "Explore Max (Tier 3)", duration: "10–12 Jam", price: 549000 }
     ],
     companion: [
-      { id: "companion-short", name: "Companion Short (Tier 1)", duration: "2 Jam", price: 110000 },
-      { id: "companion-flex", name: "Companion Flex (Tier 2)", duration: "4 Jam", price: 210000 },
+      { id: "companion-short", name: "Companion Short (Tier 1)", duration: "2 Jam", price: 120000 },
+      { id: "companion-flex", name: "Companion Flex (Tier 2)", duration: "4 Jam", price: 200000 },
       { id: "companion-day", name: "Companion Day (Tier 3)", duration: "8 Jam", price: 379000 }
     ]
   };
@@ -959,8 +959,8 @@ function initTripConfigurator() {
       const option = document.createElement("option");
       option.value = pkg.id;
       option.text = pkg.name;
-      // Pre-select second package (signature/plus/day/flex) if it exists
-      if (index === 1) {
+      // Pre-select Tier 1 by default
+      if (index === 0) {
         option.selected = true;
       }
       tierSelect.appendChild(option);
